@@ -74,7 +74,7 @@ export function HeroSection() {
             className="oz-hero-circle mb-[24px] ml-[-22px] h-[110px] w-[110px] object-contain"
           />
           <h3
-            className="oz-fade-in-up m-0 text-left font-sans font-normal text-[54px] leading-[54px] xl:text-[80px] xl:leading-[80px]"
+            className="oz-fade-in-up m-0 ml-[-3px] text-left font-sans font-normal text-[54px] leading-[54px] xl:text-[80px] xl:leading-[80px]"
             style={{ letterSpacing: "-3px" }}
           >
             <span style={{ color: "#fff" }}>Your </span>

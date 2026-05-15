@@ -21,13 +21,13 @@ export function QuestionsSection() {
       />
       <div className="relative z-10 mx-auto flex max-w-[1100px] flex-col lg:flex-row">
         <div className="lg:w-[605px]">
-          <h3 className="text-left font-sans text-[52px] font-light leading-[62.4px] tracking-[-2px] text-[#00496a] mb-[30px]">
+          <h3 className="text-left font-sans text-[52px] font-light leading-[62.4px] tracking-[-2px] text-[#124336] mb-[30px]">
             We connect European companies with highly qualified and culturally
             compatible candidates.
           </h3>
           <a
             href="/expertise/"
-            className="inline-block rounded-[20px] border-none bg-[#00496a] px-[30px] py-[15px] font-sans text-[13px] font-bold uppercase leading-none tracking-[1px] text-white transition-transform duration-300 hover:scale-110"
+            className="inline-block rounded-[20px] border-none bg-[#124336] px-[30px] py-[15px] font-sans text-[13px] font-bold uppercase leading-none tracking-[1px] text-white transition-transform duration-300 hover:scale-110"
           >
             Learn more
           </a>
@@ -38,7 +38,7 @@ export function QuestionsSection() {
             return (
               <h3
                 key={question}
-                className={`font-serif text-[20px] leading-[26px] text-[#00496a] ${
+                className={`font-[family-name:var(--font-plus-jakarta-sans)] text-[20px] leading-[26px] text-[#124336] ${
                   isLast ? "font-bold mb-[8px]" : "font-normal mb-[5px]"
                 } ${index === 0 ? "" : "mt-[28px]"}`}
               >

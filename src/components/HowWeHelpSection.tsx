@@ -32,7 +32,7 @@ export function HowWeHelpSection() {
           className="mb-[24px] h-auto w-[280px]"
         />
 
-        <h3 className="m-0 text-left font-sans text-[50px] font-bold leading-[55px] tracking-[-1px] text-[#00496a]">
+        <h3 className="m-0 text-left font-sans text-[50px] font-bold leading-[55px] tracking-[-1px] text-[#124336]">
           How we can help
         </h3>
 
@@ -49,7 +49,7 @@ export function HowWeHelpSection() {
                 }`}
               >
                 <CheckCircleIcon className="mr-[12px] h-[24px] w-[24px] shrink-0 text-[#90cc57]" />
-                <span className="font-serif text-[18px] font-light leading-[25.2px] text-[#0d0d0d]">
+                <span className="font-[family-name:var(--font-plus-jakarta-sans)] text-[18px] font-light leading-[25.2px] text-[#124336]">
                   {item}
                 </span>
               </li>
@@ -59,7 +59,7 @@ export function HowWeHelpSection() {
 
         <a
           href="/connect/"
-          className="mt-[30px] inline-block self-start rounded-[20px] bg-[#00496a] px-[30px] py-[15px] font-sans text-[13px] font-bold uppercase leading-none tracking-[1px] text-white transition-transform duration-300 hover:scale-110"
+          className="mt-[30px] inline-block self-start rounded-[20px] bg-[#124336] px-[30px] py-[15px] font-sans text-[13px] font-bold uppercase leading-none tracking-[1px] text-white transition-transform duration-300 hover:scale-110"
         >
           contact us Today
         </a>

@@ -34,10 +34,10 @@ export function BlogSection() {
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-[1100px] text-left">
-        <h5 className="mb-[16px] font-sans text-[12px] font-bold uppercase tracking-[12px] text-[#00496a]">
+        <h5 className="mb-[16px] font-sans text-[12px] font-bold uppercase tracking-[12px] text-[#124336]">
           OertzenGroup Resources
         </h5>
-        <h3 className="mb-[40px] font-sans text-[36px] font-bold leading-[1.1] tracking-[-1px] text-[#00496a] xl:text-[54px] xl:leading-[54px]">
+        <h3 className="mb-[40px] font-sans text-[36px] font-bold leading-[1.1] tracking-[-1px] text-[#124336] xl:text-[54px] xl:leading-[54px]">
           Latest from OERTZENGroup
         </h3>
         <div className="grid grid-cols-1 gap-x-[24px] gap-y-[35px] md:grid-cols-2 xl:grid-cols-3">
