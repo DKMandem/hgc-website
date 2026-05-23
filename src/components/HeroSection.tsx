@@ -56,27 +56,12 @@ export function HeroSection() {
         >
         <div className="w-full max-w-[600px]">
           <h3
-            className="oz-fade-in-up m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[54px] leading-[54px] xl:text-[80px] xl:leading-[80px]"
-            style={{ letterSpacing: "-3px" }}
+            className="oz-fade-in-up m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[40px] leading-[44px] xl:text-[60px] xl:leading-[64px]"
+            style={{ letterSpacing: "-2px" }}
           >
-            <span style={{ color: "#fff" }}>Your </span>
-            <span style={{ color: "#3bdbb1" }}>search</span>{" "}
-            <span style={{ color: "#fff" }}>stops here</span>
+            <span style={{ color: "#fff" }}>{"Great Companies are built by Great "}</span>
+            <span style={{ color: "#3bdbb1" }}>People</span>
           </h3>
-
-          <p
-            className="font-sans"
-            style={{
-              fontSize: "15px",
-              fontWeight: 500,
-              color: "rgb(240,240,240)",
-              letterSpacing: "3px",
-              marginTop: "16px",
-              marginBottom: "0",
-            }}
-          >
-            Executive Search · Leadership Recruitment · Talent Advisory
-          </p>
 
           <p
             className="font-extralight"
@@ -92,11 +77,13 @@ export function HeroSection() {
               textAlign: "justify",
             }}
           >
-            OERTZENGroup is an Executive Search and Professional Recruitment
-            firm serving European clients with an established footprint in
-            North America as well as those looking to enter these markets. Our
-            specialty includes the search for C-level Executives and
-            mid-management professionals.
+            Hansen Global Consult is a retained executive search and
+            professional recruitment firm helping companies across North
+            America build high-performing leadership teams. We specialize in
+            C-suite executives, commercial leaders, and mid-management
+            professionals, and partner with clients on talent assessment and
+            leadership advisory to support confident, growth-driven people
+            decisions.
           </p>
 
           <a
