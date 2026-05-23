@@ -97,10 +97,11 @@ export function UnderlineMarker({
     >
       <path
         className={pathClassName}
-        d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"
+        d="M8,126 C 150,150 350,150 492,126"
         fill="none"
         stroke="currentColor"
-        strokeWidth="9"
+        strokeWidth="6"
+        strokeLinecap="round"
       />
     </svg>
   );

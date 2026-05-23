@@ -1,57 +1,46 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { UnderlineMarker, ArrowCircleRightIcon } from "@/components/icons";
-
-const SLIDES = [
-  "/images/hero-slide-1.jpg",
-  "/images/hero-slide-2.jpg",
-  "/images/hero-slide-3.jpg",
-  "/images/hero-slide-4.jpg",
-  "/images/hero-slide-5.jpg",
-] as const;
-
-const SLIDE_INTERVAL_MS = 5000;
+import { ArrowCircleRightIcon } from "@/components/icons";
 
 export function HeroSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [swapped, setSwapped] = useState(false);
 
   useEffect(() => {
-    const id = window.setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % SLIDES.length);
-    }, SLIDE_INTERVAL_MS);
-
-    return () => window.clearInterval(id);
+    const id = window.setTimeout(() => setSwapped(true), 8000);
+    return () => window.clearTimeout(id);
   }, []);
 
   return (
     <section
       className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
     >
-      {/* Layer 1: slideshow (z-0) */}
-      <div className="absolute inset-0 z-0">
-        {SLIDES.map((src, i) => {
-          const isActive = i === activeIndex;
-          return (
-            <div
-              key={src}
-              aria-hidden="true"
-              className="absolute inset-0 bg-cover transition-opacity duration-1000 ease-in-out"
-              style={{
-                backgroundImage: `url(${src})`,
-                backgroundPosition: "50% 0%",
-                opacity: isActive ? 1 : 0,
-                transform: isActive ? "scale(1.3)" : "scale(1)",
-                transformOrigin: "center center",
-                transition:
-                  "opacity 1000ms ease-in-out, transform 6000ms ease-out",
-                willChange: "opacity, transform",
-              }}
-            />
-          );
-        })}
-      </div>
+      {/* Layer 1a: initial background image (z-0) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 bg-cover"
+        style={{
+          backgroundImage: "url(/images/middleagehandshakelady-fixd.png)",
+          backgroundPosition: "68% 50%",
+        }}
+      />
+      {/* Layer 1b: second image, fades in once after 8s and stays.
+          Oversized to 120% so we have horizontal pan room (the natural
+          1536×1024 image fits to width under bg-cover, leaving 0px to pan).
+          Position 0% pushes the man right so only his ear sits under the
+          green panel instead of his eye. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url(/images/manshakinghand1-fixd.png)",
+          backgroundSize: "110% auto",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0% 30%",
+          opacity: swapped ? 1 : 0,
+          transition: "opacity 1500ms ease-in-out",
+        }}
+      />
 
       {/* Centered 1200px container so the blue panel aligns with the
           navy header block (both start at the container's left edge) */}
@@ -66,28 +55,12 @@ export function HeroSection() {
           }}
         >
         <div className="w-full max-w-[600px]">
-          <Image
-            src="/images/hgc-logo-lightest-transparent.png"
-            alt=""
-            width={110}
-            height={110}
-            className="oz-hero-circle mb-[24px] ml-[-22px] h-[110px] w-[110px] object-contain"
-          />
           <h3
-            className="oz-fade-in-up m-0 ml-[-3px] text-left font-sans font-normal text-[54px] leading-[54px] xl:text-[80px] xl:leading-[80px]"
+            className="oz-fade-in-up m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[54px] leading-[54px] xl:text-[80px] xl:leading-[80px]"
             style={{ letterSpacing: "-3px" }}
           >
             <span style={{ color: "#fff" }}>Your </span>
-            <span
-              className="relative inline-block"
-              style={{ color: "#3bdbb1" }}
-            >
-              search
-              <UnderlineMarker
-                className="oz-hero-marker absolute left-0"
-                pathClassName="oz-hero-underline-path"
-              />
-            </span>{" "}
+            <span style={{ color: "#3bdbb1" }}>search</span>{" "}
             <span style={{ color: "#fff" }}>stops here</span>
           </h3>
 
@@ -102,7 +75,7 @@ export function HeroSection() {
               marginBottom: "0",
             }}
           >
-            Executive Search · Professional Recruitment
+            Executive Search · Leadership Recruitment · Talent Advisory
           </p>
 
           <p
@@ -116,6 +89,7 @@ export function HeroSection() {
               marginTop: "24px",
               marginBottom: "14.4px",
               maxWidth: "520px",
+              textAlign: "justify",
             }}
           >
             OERTZENGroup is an Executive Search and Professional Recruitment
@@ -148,29 +122,11 @@ export function HeroSection() {
       </div>
 
       <style>{`
-        .oz-hero-marker {
-          width: 100%;
-          height: 0.4em;
-          bottom: -0.18em;
-          overflow: visible;
-        }
-        .oz-hero-underline-path {
-          stroke: #fff;
-          stroke-dasharray: 1500;
-          stroke-dashoffset: 1500;
-          animation: oz-underline-draw 1200ms ease-out 400ms forwards;
-        }
         .oz-hero-btn {
           transition: transform 0.3s ease;
         }
         .oz-hero-btn:hover {
           transform: scale(1.1);
-        }
-        .oz-hero-circle {
-          transition: transform 0.6s ease;
-        }
-        .oz-hero-circle:hover {
-          transform: rotate(360deg);
         }
       `}</style>
     </section>

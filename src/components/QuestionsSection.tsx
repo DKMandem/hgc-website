@@ -1,3 +1,5 @@
+import { LogoSphere } from "@/components/LogoSphere";
+
 const QUESTIONS = [
   "Does your recruiting partner adequately represent your brand?",
   "Is your organization new to the U.S. market and seeking a subject-matter expert?",
@@ -9,14 +11,35 @@ const QUESTIONS = [
 
 export function QuestionsSection() {
   return (
-    <section className="relative overflow-hidden bg-white px-[10px] pt-[75px] pb-[100px] lg:px-[100px] lg:pt-[150px]">
+    <section className="relative overflow-x-clip overflow-y-visible bg-white px-[10px] pt-[75px] pb-[100px] lg:px-[100px] lg:pt-[150px]">
+      {/* Dot-sphere brand mark + soft radial wash — lives in the left gutter
+          so it never overlaps the headline. The sphere's right edge is
+          anchored to the content container's left edge via calc(50% - 1065px)
+          (550 container_half + 500 sphere_w + 15 gap = 1065), with a min()
+          clamp so it caps the visible portion at very wide viewports and
+          hides itself when the gutter is too narrow.
+          Hidden on mobile because there is no gutter to live in. */}
+      {/* Dot-sphere brand mark — large dramatic backdrop. Anchored so its
+          right edge sits ≈100px INTO the headline column (matches the
+          requested visual scale). Opacity 0.45 keeps the headline readable
+          on top while still letting the sphere read as a present backdrop.
+            550 (container_half) - 100 (overlap_into_text) + 600 (sphere_w) = 1050
+          min() clamp prevents the sphere from creeping further inward at
+          very wide viewports. Hidden on mobile (no gutter to live in). */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-0 bg-no-repeat"
+        className="pointer-events-none absolute top-1/2 z-0 hidden h-[680px] w-[760px] -translate-y-1/2 lg:block"
         style={{
-          backgroundImage: "url(/images/logo-reverse.png)",
-          backgroundSize: "537px",
-          backgroundPosition: "-25px 444px",
+          left: "min(-260px, calc(50% - 1180px))",
+          background:
+            "radial-gradient(circle at 70% 50%, rgba(20,61,52,0.07), transparent 65%)",
+        }}
+      />
+      <LogoSphere
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 z-0 hidden h-[600px] w-[600px] -translate-y-1/2 opacity-80 lg:block"
+        style={{
+          left: "min(-200px, calc(50% - 1050px))",
         }}
       />
       <div className="relative z-10 mx-auto flex max-w-[1100px] flex-col lg:flex-row">

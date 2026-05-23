@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { HamburgerIcon, CloseIcon } from "@/components/icons";
 
@@ -9,22 +11,18 @@ interface NavItem {
   label: string;
   href: string;
   external?: boolean;
-  active?: boolean;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/", active: true },
-  { label: "Company", href: "/company/" },
-  {
-    label: "Current Openings",
-    href: "https://careers.topechelon.com/portals/91219bdb-c277-45cf-945c-1921eb2cfc57/jobs",
-    external: true,
-  },
-  { label: "Expertise", href: "/expertise/" },
+  { label: "Home", href: "/" },
+  { label: "Company", href: "/company" },
+  { label: "Expertise", href: "/expertise" },
+  { label: "Connect", href: "/connect" },
 ];
 
 export function TopHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   // Lock body scroll while the off-canvas panel is open.
   useEffect(() => {
@@ -49,6 +47,14 @@ export function TopHeader() {
             className="flex shrink-0 items-center"
             aria-label="Hansen Global Consult — Home"
           >
+            <Image
+              src="/images/hgc-logo-lightest-transparent.png"
+              alt=""
+              width={56}
+              height={56}
+              priority
+              className="-ml-[8px] mr-[2px] h-[56px] w-[56px] shrink-0 object-contain"
+            />
             <span className="font-sans text-[28px] font-bold leading-none tracking-tight text-white">
               Hansen Global Consult
             </span>
@@ -60,9 +66,13 @@ export function TopHeader() {
           {/* Desktop nav */}
           <nav className="hidden items-center md:flex">
             {NAV_ITEMS.map((item) => {
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname?.startsWith(item.href) ?? false;
               const classes = cn(
                 "font-sans text-[13px] font-bold uppercase tracking-[1px] px-[20px] py-[13px] transition-colors duration-200 ease-[ease]",
-                item.active
+                isActive
                   ? "text-[#042e24]"
                   : "text-[#042e24]/70 hover:text-[#042e24]",
               );

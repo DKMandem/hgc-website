@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Raleway, Roboto_Slab, Plus_Jakarta_Sans } from "next/font/google";
+import {
+  Raleway,
+  Roboto_Slab,
+  Plus_Jakarta_Sans,
+  Montserrat,
+} from "next/font/google";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -18,6 +23,13 @@ const robotoSlab = Roboto_Slab({
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
   display: "swap",
@@ -52,7 +64,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${raleway.variable} ${robotoSlab.variable} ${plusJakartaSans.variable} h-full antialiased`}
+      className={`${raleway.variable} ${robotoSlab.variable} ${plusJakartaSans.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

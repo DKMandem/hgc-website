@@ -4,7 +4,7 @@ export function CtaSection() {
       className="px-[30px] py-[50px] lg:px-[50px] lg:pt-[70px] lg:pb-[50px]"
       style={{
         background:
-          "linear-gradient(125deg, #1c6249 0%, #134a37 45%, #0c3527 100%)",
+          "linear-gradient(125deg, #237651 0%, #134a37 45%, #07271c 100%)",
       }}
     >
       <div className="mx-auto flex max-w-[1100px] flex-col items-start gap-[30px] lg:flex-row">
