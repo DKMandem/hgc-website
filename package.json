@@ -27,8 +27,8 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "next dev",
-    "dev:safe": "node --max-old-space-size=4096 ./node_modules/next/dist/bin/next dev",
+    "dev": "next dev --webpack",
+    "dev:safe": "node --max-old-space-size=4096 ./node_modules/next/dist/bin/next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
