@@ -1,8 +1,8 @@
 import { TopHeader } from "@/components/TopHeader";
 import { FooterSection } from "@/components/FooterSection";
 import { ConnectHero } from "@/components/connect/ConnectHero";
+import { CtaSection } from "@/components/CtaSection";
 import { ContactSection } from "@/components/connect/ContactSection";
-import { ConnectBand } from "@/components/connect/ConnectBand";
 
 export const metadata = {
   title: "Connect - Hansen Global Consult",
@@ -16,8 +16,8 @@ export default function ConnectPage() {
       <TopHeader />
       <main className="flex-1">
         <ConnectHero />
+        <CtaSection />
         <ContactSection />
-        <ConnectBand />
       </main>
       <FooterSection />
     </div>

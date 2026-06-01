@@ -1,9 +1,10 @@
 import { TopHeader } from "@/components/TopHeader";
 import { HeroSection } from "@/components/HeroSection";
-import { QuestionsSection } from "@/components/QuestionsSection";
-import { HowWeHelpSection } from "@/components/HowWeHelpSection";
+import { ServicesSection } from "@/components/ServicesSection";
+import { TopIndustriesSection } from "@/components/TopIndustriesSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CtaSection } from "@/components/CtaSection";
-import { BlogSection } from "@/components/BlogSection";
+import { ContactSection } from "@/components/connect/ContactSection";
 import { FooterSection } from "@/components/FooterSection";
 
 export default function Home() {
@@ -12,10 +13,11 @@ export default function Home() {
       <TopHeader />
       <main className="flex-1">
         <HeroSection />
-        <QuestionsSection />
-        <HowWeHelpSection />
+        <ServicesSection />
+        <TopIndustriesSection />
+        <TestimonialsSection />
         <CtaSection />
-        <BlogSection />
+        <ContactSection />
       </main>
       <FooterSection />
     </div>

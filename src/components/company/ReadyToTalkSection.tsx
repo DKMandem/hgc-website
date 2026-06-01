@@ -1,4 +1,4 @@
-export function CtaSection() {
+export function ReadyToTalkSection() {
   return (
     <section
       className="px-[30px] py-[48px] lg:px-[50px] lg:py-[72px]"

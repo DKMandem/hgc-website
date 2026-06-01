@@ -13,6 +13,7 @@ export function HeroSection() {
 
   return (
     <section
+      data-hero
       className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
     >
       {/* Layer 1a: initial background image (z-0) */}
@@ -48,7 +49,7 @@ export function HeroSection() {
         {/* Layer 2 + 3: blue gradient panel — full width on mobile,
             fixed 600px left-aligned box on desktop (aligns w/ header navy) */}
         <div
-          className="oz-fade-in flex h-full min-h-full w-full flex-col justify-start px-[20px] py-[50px] md:pl-[60px] md:pr-[120px] md:pt-[40px] md:pb-0 xl:w-[600px] xl:px-[80px] xl:pt-[100px] xl:pb-[50px]"
+          className="oz-fade-in flex h-full min-h-full w-full flex-col justify-start px-[20px] py-[50px] md:pl-[60px] md:pr-[120px] md:pt-[40px] md:pb-0 xl:w-[600px] xl:px-[80px] xl:pt-[60px] xl:pb-[50px]"
           style={{
             backgroundImage:
               "linear-gradient(180deg, rgba(18,67,54,0.88) 0%, #124336 100%)",
@@ -56,12 +57,27 @@ export function HeroSection() {
         >
         <div className="w-full max-w-[600px]">
           <h3
-            className="oz-fade-in-up m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[40px] leading-[44px] xl:text-[60px] xl:leading-[64px]"
+            className="oz-fade-in-up m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[36px] leading-[40px] xl:text-[52px] xl:leading-[56px]"
             style={{ letterSpacing: "-2px" }}
           >
-            <span style={{ color: "#fff" }}>{"Great Companies are built by Great "}</span>
-            <span style={{ color: "#3bdbb1" }}>People</span>
+            <span style={{ color: "#fff" }}>{"Great Companies are built by "}</span>
+            <span style={{ color: "#3bdbb1" }}>Great People</span>
           </h3>
+
+          <p
+            className="font-sans"
+            style={{
+              fontSize: "15px",
+              fontWeight: 500,
+              color: "rgb(240,240,240)",
+              letterSpacing: "3px",
+              marginTop: "32px",
+              marginBottom: "0",
+              textAlign: "center",
+            }}
+          >
+            Executive Search · Professional Recruitment · Leadership Development
+          </p>
 
           <p
             className="font-extralight"
@@ -71,19 +87,18 @@ export function HeroSection() {
               fontWeight: 200,
               color: "#fff",
               lineHeight: "30px",
-              marginTop: "24px",
+              marginTop: "36px",
               marginBottom: "14.4px",
               maxWidth: "520px",
               textAlign: "justify",
             }}
           >
             Hansen Global Consult is a retained executive search and
-            professional recruitment firm helping companies across North
-            America build high-performing leadership teams. We specialize in
-            C-suite executives, commercial leaders, and mid-management
-            professionals, and partner with clients on talent assessment and
-            leadership advisory to support confident, growth-driven people
-            decisions.
+            professional recruitment firm serving companies looking to expand
+            across North America. We specialize in C-suite executives,
+            commercial leaders, and mid-management professionals, and partner
+            with clients on talent assessment and leadership development to
+            support confident, growth-driven people decisions.
           </p>
 
           <a

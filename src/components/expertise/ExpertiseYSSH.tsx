@@ -1,6 +1,8 @@
-export function ExpertiseYSSH() {
+export function ExpertiseYSSH({ reverse = false }: { reverse?: boolean }) {
   return (
-    <section className="flex w-full flex-col lg:flex-row">
+    <section
+      className={`flex w-full flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
+    >
       {/* Left: photo */}
       <div
         aria-hidden="true"
@@ -11,19 +13,6 @@ export function ExpertiseYSSH() {
       {/* Right: copy */}
       <div className="flex w-full items-center bg-white px-[30px] py-[50px] lg:w-1/2 lg:px-[80px] lg:py-[80px]">
         <div className="w-full">
-          <h5
-            className="font-sans uppercase"
-            style={{
-              fontSize: "12px",
-              fontWeight: 700,
-              letterSpacing: "12px",
-              color: "#124336",
-              marginBottom: "16px",
-            }}
-          >
-            Executive Search · Professional Recruitment
-          </h5>
-
           <h3
             className="font-sans font-bold"
             style={{
@@ -31,13 +20,25 @@ export function ExpertiseYSSH() {
               lineHeight: "55px",
               letterSpacing: "-1px",
               color: "#124336",
+              marginBottom: "12px",
+            }}
+          >
+            Executive Search / Professional Recruitment
+          </h3>
+
+          <p
+            className="font-sans"
+            style={{
+              fontSize: "22px",
+              fontWeight: 500,
+              lineHeight: "28px",
+              letterSpacing: "-0.5px",
+              color: "#124336",
               marginBottom: "16px",
             }}
           >
-            Your Search
-            <br />
-            Stops Here
-          </h3>
+            Secure leaders who shape your future.
+          </p>
 
           <hr className="my-[24px] w-full max-w-[468px] border-0 border-t-[1.77px] border-[#90cc57]" />
 
@@ -49,14 +50,93 @@ export function ExpertiseYSSH() {
               lineHeight: "25.2px",
               color: "#124336",
               marginBottom: "16px",
+              textAlign: "justify",
             }}
           >
-            Our goal at Oertzen Group is to provide your company with a
-            holistic approach to your recruiting needs. We make the complex
-            process of recruiting a seamless, thoughtful, and enjoyable one. We
-            raise your brand awareness and desirability by telling your unique
-            story and why highly qualified candidates should want to work for
-            you.
+            Leadership appointments are among the most important decisions a
+            company makes. We bring the structure, market knowledge, and
+            discretion those decisions require.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: "25.2px",
+              color: "#124336",
+              marginBottom: "16px",
+              textAlign: "justify",
+            }}
+          >
+            Our global executive search process is built to identify the
+            strongest available talent &mdash; leaders who will not only meet
+            your requirements but raise the level of your company.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: "25.2px",
+              color: "#124336",
+              marginBottom: "16px",
+              textAlign: "justify",
+            }}
+          >
+            We hold to every agreed milestone and timeline, providing
+            continuous support through to offer acceptance and beyond.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: "25.2px",
+              color: "#124336",
+              marginBottom: "16px",
+              textAlign: "justify",
+            }}
+          >
+            Our clients receive consistent, senior-level attention throughout
+            the entire search &mdash; with full transparency at every stage.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: "25.2px",
+              color: "#124336",
+              marginBottom: "16px",
+              textAlign: "justify",
+            }}
+          >
+            Our process includes a thorough analysis of your needs, deep
+            knowledge of the relevant talent market, a targeted and discreet
+            candidate strategy, rigorous assessment and benchmarking, and
+            personalized onboarding and integration support &mdash; delivered
+            globally.
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: "25.2px",
+              color: "#124336",
+              marginBottom: "16px",
+              textAlign: "justify",
+            }}
+          >
+            <strong style={{ fontWeight: 700 }}>Executive Search</strong>:
+            Should a placed candidate depart within the first twelve months, we
+            conduct a full replacement search at no additional placement fee.
+            This is our commitment to every client engagement.
           </p>
 
           <p
@@ -67,13 +147,13 @@ export function ExpertiseYSSH() {
               lineHeight: "25.2px",
               color: "#124336",
               marginBottom: "0",
+              textAlign: "justify",
             }}
           >
-            We understand that filling critical positions with highly suitable
-            candidates in a timely fashion is paramount to your company
-            achieving your unique goals. Our priority is to become an
-            extension of your recruiting department. Our search continues so
-            that yours can stop. Set an appointment and let&apos;s talk.
+            <strong style={{ fontWeight: 700 }}>Professional Recruitment</strong>:
+            Should a placed candidate depart within the 3-6 months, we conduct a
+            full replacement search at no additional placement fee. This is our
+            commitment to every client engagement.
           </p>
 
           <a

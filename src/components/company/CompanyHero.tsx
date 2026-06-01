@@ -3,7 +3,10 @@ import { ArrowCircleRightIcon } from "@/components/icons";
 
 export function CompanyHero() {
   return (
-    <section className="relative w-full overflow-hidden h-[700px] xl:h-[900px]">
+    <section
+      data-hero
+      className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
+    >
       {/* Background photo layer */}
       <div
         aria-hidden="true"
@@ -24,6 +27,14 @@ export function CompanyHero() {
           }}
         >
           <div className="w-full max-w-[600px]">
+            <h2
+              className="m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[36px] leading-[40px] xl:text-[52px] xl:leading-[56px]"
+              style={{ letterSpacing: "-2px", marginTop: "16px" }}
+            >
+              <span style={{ color: "#fff" }}>{"Elevating Your "}</span>
+              <span style={{ color: "#3bdbb1" }}>Talent Strategy</span>
+            </h2>
+
             <p
               className="font-sans"
               style={{
@@ -31,19 +42,13 @@ export function CompanyHero() {
                 fontWeight: 500,
                 color: "rgb(240,240,240)",
                 letterSpacing: "3px",
-                marginTop: "16px",
+                marginTop: "32px",
                 marginBottom: "0",
+                textAlign: "center",
               }}
             >
-              Executive Search · Professional Recruitment
+              Executive Search · Professional Recruitment · Leadership Development
             </p>
-
-            <h2
-              className="m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[54px] leading-[54px] text-white xl:text-[80px] xl:leading-[80px]"
-              style={{ letterSpacing: "-3px", marginTop: "16px" }}
-            >
-              Company
-            </h2>
 
             <p
               style={{
@@ -58,9 +63,27 @@ export function CompanyHero() {
                 textAlign: "justify",
               }}
             >
-              We connect European companies with highly qualified and culturally
-              compatible candidates, providing an experienced, resourceful and
-              approachable solution for your recruitment needs.
+              We help companies attract, assess, and develop exceptional
+              leaders and specialists.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+                fontSize: "18px",
+                fontWeight: 300,
+                color: "#fff",
+                lineHeight: "30px",
+                marginTop: "16px",
+                marginBottom: "0",
+                maxWidth: "520px",
+                textAlign: "justify",
+              }}
+            >
+              We believe that engaged, high-performing people are the most
+              sustainable driver of long-term business success. The right
+              leadership and expertise strengthen company performance,
+              accelerate growth, and create lasting impact.
             </p>
 
             <Link

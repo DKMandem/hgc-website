@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { EnvelopeIcon, LinkedinIcon } from "@/components/icons";
 
 interface ContactFormState {
   firstName: string;
@@ -30,6 +29,24 @@ const inputClass =
 
 export function ContactSection() {
   const [form, setForm] = useState<ContactFormState>(initialState);
+  const imgRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = imgRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -47,18 +64,15 @@ export function ContactSection() {
   return (
     <section
       id="more"
-      className="w-full bg-white py-[100px] px-[30px]"
+      className="w-full bg-white py-[60px] px-[30px]"
     >
       <div className="mx-auto max-w-[1100px] flex flex-col lg:flex-row gap-[60px]">
         {/* Left column: contact form (~60%) */}
         <div className="w-full lg:basis-3/5">
           <h3
-            className="font-sans text-[36px] xl:text-[44px] leading-[1.15] text-[#124336] tracking-[-1px] mb-[30px]"
+            className="font-sans text-[36px] xl:text-[44px] leading-[1.15] text-[#124336] tracking-[-1px] mb-[20px]"
           >
-            <span className="font-bold">Contact us</span>{" "}
-            <span className="font-light">
-              &amp; let&apos;s discuss your needs today
-            </span>
+            <span className="font-bold">Contact Us</span>
           </h3>
 
           <form
@@ -152,7 +166,7 @@ export function ContactSection() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="inline-flex items-center gap-[10px] bg-[#3bdbb1] text-white px-[30px] py-[15px] rounded-[20px] font-sans text-[13px] font-bold uppercase tracking-[1px] mt-[24px] hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-[10px] bg-[#124336] text-white px-[30px] py-[15px] rounded-[20px] font-sans text-[13px] font-bold uppercase tracking-[1px] mt-[24px] hover:scale-105 transition-transform"
               >
                 Send Message
               </button>
@@ -160,90 +174,35 @@ export function ContactSection() {
           </form>
         </div>
 
-        {/* Right column: contact info card (~40%) */}
-        <aside className="w-full lg:basis-2/5">
-          <Image
-            src="/images/logo-full.png"
-            alt="OERTZENGroup"
-            width={240}
-            height={67}
-            className="mb-[24px]"
-          />
-
-          <h5
-            className="font-sans text-[12px] font-bold uppercase text-[#124336] mb-[24px]"
-            style={{ letterSpacing: "8px" }}
+        {/* Right column: dark green panel with office photo popup (~40%) */}
+        <aside
+          className="relative w-full overflow-hidden rounded-[12px] lg:basis-2/5"
+          style={{
+            background:
+              "linear-gradient(125deg, #237651 0%, #134a37 45%, #07271c 100%)",
+            minHeight: "420px",
+          }}
+        >
+          <div
+            ref={imgRef}
+            className="relative h-full w-full"
+            style={{
+              minHeight: "420px",
+              transformOrigin: "center center",
+              transition:
+                "transform 900ms cubic-bezier(0.34, 1.56, 0.64, 1), opacity 700ms ease-out",
+              transform: visible ? "scale(1)" : "scale(0.6)",
+              opacity: visible ? 1 : 0,
+            }}
           >
-            Search · Select · Connect
-          </h5>
-
-          <ul className="space-y-[16px] list-none p-0 m-0">
-            <li>
-              <a
-                href="https://goo.gl/maps/T3GSAhiPkP1ZeEZM8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-plus-jakarta-sans)] text-[14px] text-[#124336] hover:underline not-italic block leading-[1.5]"
-              >
-                <span aria-hidden="true" className="inline-block mr-[8px]">
-                  &#9679;
-                </span>
-                1 Concourse Pkwy Suite 800
-                <br />
-                <span className="inline-block ml-[18px]">
-                  Atlanta, GA 30328
-                </span>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="tel:+14044800033"
-                className="font-[family-name:var(--font-plus-jakarta-sans)] text-[14px] text-[#124336] hover:underline block"
-              >
-                <span aria-hidden="true" className="inline-block mr-[8px]">
-                  &#9742;
-                </span>
-                404-480-0033
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://oertzengroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-plus-jakarta-sans)] text-[14px] text-[#124336] hover:underline block"
-              >
-                <span aria-hidden="true" className="inline-block mr-[8px]">
-                  &#9783;
-                </span>
-                https://oertzengroup.com
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="mailto:info@oertzengroup.com?subject=Message%20from%20OERTZENGroup%20Website"
-                className="font-[family-name:var(--font-plus-jakarta-sans)] text-[14px] text-[#124336] hover:underline block"
-              >
-                <EnvelopeIcon className="inline h-[16px] w-[16px] mr-[8px]" />
-                info@oertzengroup.com
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.linkedin.com/company/oertzen-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-[family-name:var(--font-plus-jakarta-sans)] text-[14px] text-[#124336] hover:underline block"
-              >
-                <LinkedinIcon className="inline h-[16px] w-[16px] mr-[8px]" />
-                Connect on LinkedIn
-              </a>
-            </li>
-          </ul>
+            <Image
+              src="/images/office-building.jpg"
+              alt="Hansen Global Consult office"
+              fill
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
         </aside>
       </div>
     </section>

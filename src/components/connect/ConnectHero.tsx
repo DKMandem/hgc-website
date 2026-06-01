@@ -3,13 +3,16 @@ import { ArrowCircleRightIcon } from "@/components/icons";
 
 export function ConnectHero() {
   return (
-    <section className="relative w-full overflow-hidden h-[700px] xl:h-[900px]">
+    <section
+      data-hero
+      className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
+    >
       {/* Background photo layer */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url(/images/blog-parallax.jpg)",
+          backgroundImage: "url(/images/austinabanner.jpg)",
         }}
       />
 
@@ -19,30 +22,31 @@ export function ConnectHero() {
           className="flex h-full min-h-full w-full flex-col justify-start px-[20px] py-[50px] md:pl-[60px] md:pr-[120px] md:pt-[40px] md:pb-0 xl:w-[600px] xl:px-[80px] xl:pt-[100px] xl:pb-[50px]"
           style={{
             backgroundImage:
-              "linear-gradient(125deg, #1c6249 0%, #134a37 45%, #0c3527 100%)",
+              "linear-gradient(180deg, rgba(18,67,54,0.88) 0%, #124336 100%)",
           }}
         >
           <div className="w-full max-w-[600px]">
-            <h5
-              className="font-sans"
-              style={{
-                fontSize: "15px",
-                fontWeight: 500,
-                color: "rgb(240,240,240)",
-                letterSpacing: "3px",
-                marginTop: "16px",
-                marginBottom: "0",
-              }}
-            >
-              Executive Search · Professional Recruitment
-            </h5>
-
             <h2
               className="m-0 ml-[-3px] text-left font-[family-name:var(--font-montserrat)] font-normal text-[54px] leading-[54px] text-white xl:text-[80px] xl:leading-[80px]"
               style={{ letterSpacing: "-3px", marginTop: "16px" }}
             >
               Connect
             </h2>
+
+            <p
+              className="font-sans"
+              style={{
+                fontSize: "15px",
+                fontWeight: 500,
+                color: "rgb(240,240,240)",
+                letterSpacing: "3px",
+                marginTop: "32px",
+                marginBottom: "0",
+                textAlign: "center",
+              }}
+            >
+              Executive Search · Professional Recruitment · Leadership Development
+            </p>
 
             <p
               style={{
@@ -57,7 +61,7 @@ export function ConnectHero() {
                 textAlign: "justify",
               }}
             >
-              Here at OERTZENGroup, we are committed to providing you with
+              Here at Hansen Global Consult, we are committed to providing you with
               excellence in executive recruitment services regardless of your
               business size and industry.
             </p>

@@ -22,6 +22,7 @@ const NAV_ITEMS: NavItem[] = [
 
 export function TopHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
   // Lock body scroll while the off-canvas panel is open.
@@ -34,28 +35,82 @@ export function TopHeader() {
     };
   }, [open]);
 
+  // Once the hero has scrolled past the sticky header, switch the header's
+  // left block from dark green to the same gray as the nav block. If a page
+  // has no hero, the threshold stays out of reach so the header never swaps.
+  useEffect(() => {
+    const HEADER_HEIGHT = 70;
+    const hero = document.querySelector<HTMLElement>("[data-hero]");
+    let threshold = Number.POSITIVE_INFINITY;
+    const computeThreshold = () => {
+      threshold = hero
+        ? hero.offsetTop + hero.offsetHeight - HEADER_HEIGHT
+        : Number.POSITIVE_INFINITY;
+    };
+    const onScroll = () => setScrolled(window.scrollY >= threshold);
+    const onResize = () => {
+      computeThreshold();
+      onScroll();
+    };
+    computeThreshold();
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [pathname]);
+
   return (
     <header
-      className="static w-full bg-[#DEDEDE]"
+      className="sticky top-0 z-50 w-full bg-[#DEDEDE]"
       style={{ height: "70px", padding: 0 }}
     >
       <div className="mx-auto flex h-[70px] w-full max-w-[1200px]">
-        {/* Left half — dark block matching the hero box (continuous column) */}
-        <div className="flex w-1/2 items-center bg-[#124336] pl-[10px] pr-[20px]">
+        {/* Left half — dark block matching the hero box (continuous column).
+            Once scrolled past the hero it fades to the same gray as the nav. */}
+        <div
+          className={cn(
+            "flex w-1/2 items-center pl-[10px] pr-[20px] transition-colors duration-300 ease-[ease]",
+            scrolled ? "bg-[#DEDEDE]" : "bg-[#124336]",
+          )}
+        >
           <Link
             href="/"
             className="flex shrink-0 items-center"
             aria-label="Hansen Global Consult — Home"
           >
-            <Image
-              src="/images/hgc-logo-lightest-transparent.png"
-              alt=""
-              width={56}
-              height={56}
-              priority
-              className="-ml-[8px] mr-[2px] h-[56px] w-[56px] shrink-0 object-contain"
-            />
-            <span className="font-sans text-[28px] font-bold leading-none tracking-tight text-white">
+            <span className="relative -ml-[8px] mr-[2px] h-[56px] w-[56px] shrink-0">
+              <Image
+                src="/images/hgc-logo-lightest-transparent.png"
+                alt=""
+                width={56}
+                height={56}
+                priority
+                className={cn(
+                  "absolute inset-0 h-[56px] w-[56px] object-contain transition-opacity duration-300 ease-[ease]",
+                  scrolled ? "opacity-0" : "opacity-100",
+                )}
+              />
+              <Image
+                src="/images/CircleLogo.png"
+                alt=""
+                width={56}
+                height={56}
+                priority
+                className={cn(
+                  "absolute inset-0 h-[56px] w-[56px] object-contain transition-opacity duration-300 ease-[ease]",
+                  scrolled ? "opacity-100" : "opacity-0",
+                )}
+              />
+            </span>
+            <span
+              className={cn(
+                "font-sans text-[28px] font-bold leading-none tracking-tight transition-colors duration-300 ease-[ease]",
+                scrolled ? "text-[#124336]" : "text-white",
+              )}
+            >
               Hansen Global Consult
             </span>
           </Link>

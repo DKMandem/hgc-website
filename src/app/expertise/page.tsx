@@ -1,11 +1,9 @@
 import { TopHeader } from "@/components/TopHeader";
 import { FooterSection } from "@/components/FooterSection";
 import { ExpertiseHero } from "@/components/expertise/ExpertiseHero";
-import { ExpertiseYSSH } from "@/components/expertise/ExpertiseYSSH";
-import { IndustriesSection } from "@/components/expertise/IndustriesSection";
-import { WhoDoWePlaceSection } from "@/components/expertise/WhoDoWePlaceSection";
-import { ExpertiseMission } from "@/components/expertise/ExpertiseMission";
-import { ExpertiseBand } from "@/components/expertise/ExpertiseBand";
+import { ExpertiseServices } from "@/components/expertise/ExpertiseServices";
+import { CtaSection } from "@/components/CtaSection";
+import { ContactSection } from "@/components/connect/ContactSection";
 
 export const metadata = {
   title: "Expertise - Hansen Global Consult",
@@ -19,11 +17,9 @@ export default function ExpertisePage() {
       <TopHeader />
       <main className="flex-1">
         <ExpertiseHero />
-        <ExpertiseYSSH />
-        <IndustriesSection />
-        <WhoDoWePlaceSection />
-        <ExpertiseMission />
-        <ExpertiseBand />
+        <ExpertiseServices />
+        <CtaSection />
+        <ContactSection />
       </main>
       <FooterSection />
     </div>

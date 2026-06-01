@@ -2,10 +2,9 @@ import { TopHeader } from "@/components/TopHeader";
 import { FooterSection } from "@/components/FooterSection";
 import { CompanyHero } from "@/components/company/CompanyHero";
 import { SSCSection } from "@/components/company/SSCSection";
-import { MissionStrip } from "@/components/company/MissionStrip";
-import { CompanyBand } from "@/components/company/CompanyBand";
 import { TeamSection } from "@/components/company/TeamSection";
-import { EPICCCSection } from "@/components/company/EPICCCSection";
+import { ReadyToTalkSection } from "@/components/company/ReadyToTalkSection";
+import { ContactSection } from "@/components/connect/ContactSection";
 
 export const metadata = {
   title: "Company - Hansen Global Consult",
@@ -20,10 +19,9 @@ export default function CompanyPage() {
       <main className="flex-1">
         <CompanyHero />
         <SSCSection />
-        <MissionStrip />
-        <CompanyBand />
         <TeamSection />
-        <EPICCCSection />
+        <ReadyToTalkSection />
+        <ContactSection />
       </main>
       <FooterSection />
     </div>
