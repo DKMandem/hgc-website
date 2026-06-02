@@ -3,11 +3,18 @@ import Image from "next/image";
 type Industry = {
   name: string;
   image: string | null;
+  // CSS object-position for the cropped image; defaults to "center".
+  position?: string;
 };
 
 const INDUSTRIES: Industry[] = [
   { name: "MedTech", image: "/images/industry-pharma.jpg" },
-  { name: "Robotic & Automation", image: "/images/industry-RoboticandAutomation.jpg" },
+  {
+    name: "Robotic & Automation",
+    image: "/images/industry-RoboticandAutomation.jpg",
+    // Robot sits left-of-center; pull the crop left so it centers in frame.
+    position: "35% center",
+  },
   { name: "IT & Data Centers", image: "/images/industry-itanddatacenter.webp" },
   { name: "Manufacturing", image: "/images/industry-manufactoring.webp" },
   { name: "Food & Beverage", image: "/images/industry-foodandbeverage.webp" },
@@ -37,6 +44,7 @@ export function TopIndustriesSection() {
                   alt={industry.name}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  style={{ objectPosition: industry.position ?? "center" }}
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
                 />
               ) : (
