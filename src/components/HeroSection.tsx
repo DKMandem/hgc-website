@@ -76,7 +76,7 @@ export function HeroSection() {
               textAlign: "center",
             }}
           >
-            Executive Search · Professional Recruitment · Leadership Development
+            Executive Search · Professional Recruitment&nbsp;· Leadership Development
           </p>
 
           <p

@@ -13,21 +13,21 @@ const SERVICES: Service[] = [
     description:
       "We partner with medtech, robotics, food manufacturing, industrial technology, and other private equity-backed companies to identify and secure the leadership and specialist talent needed to scale successfully in the North American market.",
     image: "/images/services/executivesearch.png",
-    href: "/expertise/?service=executive-search",
+    href: "/expertise?service=executive-search",
   },
   {
     title: "Talent Assessment",
     description:
       "We help companies assess leadership and talent capabilities to identify potential, strengthen teams, and make better business decisions.",
     image: "/images/services/talentassessment.png",
-    href: "/expertise/?service=talent-assessment",
+    href: "/expertise?service=talent-assessment",
   },
   {
     title: "Leadership Development",
     description:
       "We help companies develop leadership and team capabilities to unlock potential and drive stronger business results.",
     image: "/images/services/leadershipadvisory.png",
-    href: "/expertise/?service=leadership-advisory",
+    href: "/expertise?service=leadership-advisory",
   },
 ];
 
