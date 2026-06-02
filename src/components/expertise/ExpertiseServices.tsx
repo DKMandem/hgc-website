@@ -168,6 +168,8 @@ export function ExpertiseServices() {
     if (!requested) return;
     const index = SERVICES.findIndex((s) => s.id === requested);
     if (index === -1) return;
+    // Intentional post-mount sync from the URL to avoid a hydration mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActive(index);
     // Wait for layout, then bring the Services section into view. The section
     // carries scroll-mt to clear the sticky 70px header.

@@ -29,6 +29,8 @@ export function ConnectHero() {
   useEffect(() => {
     const n = Number(new URLSearchParams(window.location.search).get("vid"));
     if (Number.isFinite(n) && n >= 1 && n <= HERO_VIDEOS.length) {
+      // Intentional post-mount sync from the URL to avoid a hydration mismatch.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVideoIndex(n - 1);
     }
   }, []);
