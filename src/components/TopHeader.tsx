@@ -192,7 +192,7 @@ export function TopHeader() {
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
-            className="flex items-center justify-center text-white"
+            className="flex items-center justify-center text-[#124336]"
           >
             <CloseIcon className="h-6 w-6" />
           </button>
@@ -200,7 +200,7 @@ export function TopHeader() {
         <nav className="flex flex-col">
           {NAV_ITEMS.map((item) => {
             const classes =
-              "font-sans text-[16px] font-bold uppercase tracking-[1px] text-white px-[20px] py-[16px]";
+              "font-sans text-[16px] font-bold uppercase tracking-[1px] text-[#124336] px-[20px] py-[16px]";
             return item.external ? (
               <a
                 key={item.label}
