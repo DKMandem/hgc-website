@@ -21,6 +21,13 @@ const initialState: ContactFormState = {
   message: "",
 };
 
+// Web3Forms access key tied to info@hansenglobalconsult.com.
+// Generate one (free) at https://web3forms.com using that inbox, then paste it here.
+// This key is safe to expose client-side.
+const WEB3FORMS_ACCESS_KEY = "eb0d75e9-9107-461e-b227-affbc9f3f9fe";
+
+type SubmitStatus = "idle" | "submitting" | "success" | "error";
+
 const labelClass =
   "block text-[12px] font-medium uppercase tracking-[1px] text-[#124336] mb-[6px]";
 
@@ -29,6 +36,8 @@ const inputClass =
 
 export function ContactSection() {
   const [form, setForm] = useState<ContactFormState>(initialState);
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [feedback, setFeedback] = useState("");
   const imgRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -55,10 +64,51 @@ export function ContactSection() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Thanks! We will be in touch.");
-    setForm(initialState);
+    setStatus("submitting");
+    setFeedback("");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New contact form submission — Hansen Global Consult",
+          from_name: "Hansen Global Consult Website",
+          name: `${form.firstName} ${form.lastName}`.trim(),
+          first_name: form.firstName,
+          last_name: form.lastName,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          message: form.message,
+        }),
+      });
+
+      const data = (await res.json()) as { success: boolean; message?: string };
+
+      if (res.ok && data.success) {
+        setStatus("success");
+        setFeedback("Thanks! Your message has been sent. We'll be in touch.");
+        setForm(initialState);
+      } else {
+        setStatus("error");
+        setFeedback(
+          data.message ||
+            "Something went wrong. Please try again or email us directly.",
+        );
+      }
+    } catch {
+      setStatus("error");
+      setFeedback(
+        "Network error. Please try again or email info@hansenglobalconsult.com directly.",
+      );
+    }
   };
 
   return (
@@ -166,11 +216,24 @@ export function ContactSection() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="inline-flex items-center gap-[10px] bg-[#124336] text-white px-[30px] py-[15px] rounded-[20px] font-sans text-[13px] font-bold uppercase tracking-[1px] mt-[24px] hover:scale-105 transition-transform"
+                disabled={status === "submitting"}
+                className="inline-flex items-center gap-[10px] bg-[#124336] text-white px-[30px] py-[15px] rounded-[20px] font-sans text-[13px] font-bold uppercase tracking-[1px] mt-[24px] hover:scale-105 transition-transform disabled:opacity-60 disabled:hover:scale-100"
               >
-                Send Message
+                {status === "submitting" ? "Sending…" : "Send Message"}
               </button>
             </div>
+
+            {feedback && (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`sm:col-span-2 text-[14px] ${
+                  status === "error" ? "text-red-600" : "text-[#124336]"
+                }`}
+              >
+                {feedback}
+              </p>
+            )}
           </form>
         </div>
 
