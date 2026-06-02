@@ -11,7 +11,7 @@ export function CtaSection() {
         <h3 className="m-0 text-center font-sans text-[18px] font-light tracking-[1px] text-white/80 lg:text-[22px]">
           Ready to take the next step?
         </h3>
-        <p className="mt-[20px] text-center font-sans text-[56px] font-extralight leading-[61.6px] tracking-[-2px] text-white lg:text-[88px] lg:leading-[92px]">
+        <p className="mt-[20px] text-center font-sans text-[36px] font-extralight leading-[40px] tracking-[-1px] text-white sm:text-[48px] sm:leading-[54px] sm:tracking-[-2px] lg:text-[88px] lg:leading-[92px]">
           Change starts with a{" "}
           <span style={{ color: "#3bdbb1" }}>conversation</span>.
         </p>

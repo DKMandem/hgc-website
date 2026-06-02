@@ -16,8 +16,8 @@ export function ExpertiseYSSH({ reverse = false }: { reverse?: boolean }) {
           <h3
             className="font-sans font-bold"
             style={{
-              fontSize: "50px",
-              lineHeight: "55px",
+              fontSize: "clamp(30px, 6vw, 50px)",
+              lineHeight: "1.1",
               letterSpacing: "-1px",
               color: "#124336",
               marginBottom: "12px",

@@ -72,7 +72,7 @@ export function TopHeader() {
             Once scrolled past the hero it fades to the same gray as the nav. */}
         <div
           className={cn(
-            "flex w-1/2 items-center pl-[10px] pr-[20px] transition-colors duration-300 ease-[ease]",
+            "flex w-auto flex-1 items-center pl-[10px] pr-[20px] transition-colors duration-300 ease-[ease] md:w-1/2 md:flex-none",
             scrolled ? "bg-[#DEDEDE]" : "bg-[#124336]",
           )}
         >
@@ -107,7 +107,7 @@ export function TopHeader() {
             </span>
             <span
               className={cn(
-                "font-sans text-[28px] font-bold leading-none tracking-tight transition-colors duration-300 ease-[ease]",
+                "truncate font-sans text-[17px] font-bold leading-none tracking-tight transition-colors duration-300 ease-[ease] sm:text-[22px] md:text-[28px]",
                 scrolled ? "text-[#124336]" : "text-white",
               )}
             >
@@ -117,7 +117,7 @@ export function TopHeader() {
         </div>
 
         {/* Right half — lime green block with nav */}
-        <div className="flex w-1/2 items-center justify-end bg-[#DEDEDE] pr-[15px] md:pr-[20px]">
+        <div className="flex items-center justify-end bg-[#DEDEDE] pr-[15px] md:w-1/2 md:pr-[20px]">
           {/* Desktop nav */}
           <nav className="hidden items-center md:flex">
             {NAV_ITEMS.map((item) => {
