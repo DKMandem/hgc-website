@@ -13,14 +13,14 @@ type TeamMember = {
 const team: TeamMember[] = [
   {
     name: "Camilla Daniels Hansen",
-    title: "Managing Partner",
+    title: "Managing Director",
     img: "/images/team/CamillaDanielsHansen.avif",
     objectPosition: "50% 18%",
     linkedin: "https://www.linkedin.com/in/camilladaniels/",
   },
   {
     name: "Anna Berg Hansen",
-    title: "Managing Partner",
+    title: "Collaborative Partner",
     img: "/images/team/AnnaBergHansen.avif",
     brightness: 1.1,
     linkedin: "https://www.linkedin.com/in/annaberghansen/",
