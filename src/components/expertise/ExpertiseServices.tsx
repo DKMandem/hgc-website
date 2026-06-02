@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Pillar = { title: string; points: string[] };
 
@@ -161,16 +161,27 @@ function ImpactText({ text, highlight }: { text: string; highlight?: string }) {
 export function ExpertiseServices() {
   const [active, setActive] = useState(0);
   const service = SERVICES[active];
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const requested = new URLSearchParams(window.location.search).get("service");
     if (!requested) return;
     const index = SERVICES.findIndex((s) => s.id === requested);
-    if (index !== -1) setActive(index);
+    if (index === -1) return;
+    setActive(index);
+    // Wait for layout, then bring the Services section into view. The section
+    // carries scroll-mt to clear the sticky 70px header.
+    requestAnimationFrame(() => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }, []);
 
   return (
-    <section className="w-full bg-white px-[30px] py-[80px] lg:py-[90px]">
+    <section
+      id="services"
+      ref={sectionRef}
+      className="w-full scroll-mt-[70px] bg-white px-[30px] py-[80px] lg:py-[90px]"
+    >
       <div className="mx-auto max-w-[1100px]">
         {/* Section heading */}
         <div className="text-center">
