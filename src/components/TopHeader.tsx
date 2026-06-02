@@ -117,7 +117,12 @@ export function TopHeader() {
         </div>
 
         {/* Right half — lime green block with nav */}
-        <div className="flex items-center justify-end bg-[#DEDEDE] pr-[15px] md:w-1/2 md:pr-[20px]">
+        <div
+          className={cn(
+            "flex items-center justify-end pr-[15px] transition-colors duration-300 ease-[ease] md:w-1/2 md:bg-[#DEDEDE] md:pr-[20px]",
+            scrolled ? "bg-[#DEDEDE]" : "bg-[#124336]",
+          )}
+        >
           {/* Desktop nav */}
           <nav className="hidden items-center md:flex">
             {NAV_ITEMS.map((item) => {
@@ -155,7 +160,10 @@ export function TopHeader() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
             aria-expanded={open}
-            className="flex items-center justify-center text-[#042e24] md:hidden"
+            className={cn(
+              "flex items-center justify-center transition-colors duration-300 ease-[ease] md:hidden",
+              scrolled ? "text-[#042e24]" : "text-[#DEDEDE]",
+            )}
           >
             <HamburgerIcon className="h-6 w-6" />
           </button>
