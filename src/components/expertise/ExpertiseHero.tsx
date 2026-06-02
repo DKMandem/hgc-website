@@ -61,9 +61,9 @@ export function ExpertiseHero() {
                 textAlign: "justify",
               }}
             >
-              Hansen Global Consult is a multicultural firm finding high-quality
-              candidates to fill permanent positions at mid- to senior-level
-              management.
+              At Hansen Global Consult, we combine over 15 years of executive
+              search and talent advisory experience to help companies secure
+              leadership that delivers measurable impact.
             </p>
 
             <p
@@ -79,8 +79,27 @@ export function ExpertiseHero() {
                 textAlign: "justify",
               }}
             >
-              We provide a Consultative approach to our customers with a deep
-              cultural understanding of US marketplaces.
+              We go beyond traditional search. By developing a deep understanding
+              of your business, culture, and strategic priorities, we identify
+              leaders who not only fit but elevate your company.
+            </p>
+
+            <p
+              style={{
+                fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+                fontSize: "18px",
+                fontWeight: 300,
+                color: "#fff",
+                lineHeight: "30px",
+                marginTop: "24px",
+                marginBottom: "0",
+                maxWidth: "520px",
+                textAlign: "justify",
+              }}
+            >
+              Through a combination of market intelligence, rigorous assessment,
+              and close partnership, we ensure every hire strengthens your
+              leadership team and supports your long-term growth.
             </p>
 
             <Link

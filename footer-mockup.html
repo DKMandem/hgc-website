@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Footer mockup — before / after</title>
+<style>
+  :root { --grad: linear-gradient(125deg, #07271c 0%, #134a37 55%, #237651 100%); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #f3f4f6; color: #111; }
+  .label { max-width: 1140px; margin: 28px auto 8px; padding: 0 30px; font-size: 13px; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; color: #6b7280; }
+  .label span { color: #237651; }
+
+  /* shared footer chrome */
+  .footer { background: var(--grad); color: #fff; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 30px; }
+  .heading { margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #3bdbb1; }
+  .link { display: inline-block; font-size: 14px; line-height: 28px; color: rgba(255,255,255,.82); text-decoration: none; }
+  .link:hover { color: #90cc57; }
+  .brand-name { font-size: 22px; font-weight: 700; line-height: 1; letter-spacing: -.3px; }
+  .brand-tag { margin-top: 6px; font-size: 12px; font-weight: 300; letter-spacing: 1px; color: rgba(255,255,255,.7); }
+  .logo { width: 56px; height: 56px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #6fe3bf, #1d8a63); flex: 0 0 auto; }
+  .brand-row { display: flex; align-items: center; gap: 10px; }
+  .social { display: flex; gap: 14px; }
+  .social a { width: 22px; height: 22px; color: rgba(255,255,255,.6); }
+  .social svg { width: 22px; height: 22px; }
+  ul { list-style: none; }
+  li + li { margin-top: 11px; }
+
+  /* ---------- BEFORE ---------- */
+  .before .grid { display: flex; align-items: flex-start; gap: 30px; padding-top: 34px; padding-bottom: 34px; }
+  .before .col-brand { width: 30%; flex: 0 0 auto; }
+  .before .col { flex: 1; }
+  .before .copy { max-width: 1140px; margin: -40px auto 0; padding: 0 30px 28px 96px; }
+  .before .copy p { font-size: 11px; font-weight: 500; color: rgba(255,255,255,.87); }
+
+  /* ---------- AFTER ---------- */
+  .after .grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding-top: 48px; padding-bottom: 32px; }
+  .after .col-brand .brand-tag { max-width: 240px; }
+  .after .bottom { border-top: 1px solid rgba(255,255,255,.12); }
+  .after .bottom-inner { max-width: 1140px; margin: 0 auto; padding: 20px 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .after .bottom p { font-size: 12px; font-weight: 500; color: rgba(255,255,255,.7); }
+  .after .legal { display: flex; gap: 24px; }
+  .after .legal a { font-size: 12px; color: rgba(255,255,255,.7); text-decoration: none; }
+  .after .legal a:hover { color: #90cc57; }
+</style>
+</head>
+<body>
+
+<!-- ===================== BEFORE ===================== -->
+<div class="label">Before — <span>current</span></div>
+<footer class="footer before">
+  <div class="wrap">
+    <div class="grid">
+      <div class="col-brand">
+        <div class="brand-row">
+          <div class="logo"></div>
+          <div>
+            <div class="brand-name">Hansen Global Consult</div>
+            <div class="brand-tag">Great people build great companies</div>
+          </div>
+        </div>
+      </div>
+      <nav class="col">
+        <h2 class="heading">Quick Access</h2>
+        <ul>
+          <li><a class="link" href="#">Home</a></li>
+          <li><a class="link" href="#">Company</a></li>
+          <li><a class="link" href="#">Expertise</a></li>
+          <li><a class="link" href="#">Connect</a></li>
+        </ul>
+      </nav>
+      <div class="col">
+        <h2 class="heading">Contact Us</h2>
+        <ul>
+          <li><a class="link" href="#">801 Barton Springs<br>Austin, TX 78704</a></li>
+          <li><a class="link" href="#">+1 (512) 815-3552</a></li>
+          <li><a class="link" href="#">info@hansenglobalconsult.com</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2 class="heading">Get Connected</h2>
+        <div class="social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8h4.6v14H.2V8zm7.4 0h4.4v1.9h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.49 3.05 5.49 7.01V22h-4.6v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.27V22H7.6V8z"/></svg></a>
+          <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+          <a href="#" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <p>Copyright © 2026 Hansen Global Consult.</p>
+  </div>
+</footer>
+
+<!-- ===================== AFTER ===================== -->
+<div class="label">After — <span>bottom-bar version</span></div>
+<footer class="footer after">
+  <div class="wrap">
+    <div class="grid">
+      <div class="col-brand">
+        <div class="brand-row">
+          <div class="logo"></div>
+          <div>
+            <div class="brand-name">Hansen Global Consult</div>
+            <div class="brand-tag">Great people build great companies</div>
+          </div>
+        </div>
+      </div>
+      <nav class="col">
+        <h2 class="heading">Quick Access</h2>
+        <ul>
+          <li><a class="link" href="#">Home</a></li>
+          <li><a class="link" href="#">Company</a></li>
+          <li><a class="link" href="#">Expertise</a></li>
+          <li><a class="link" href="#">Connect</a></li>
+        </ul>
+      </nav>
+      <div class="col">
+        <h2 class="heading">Contact Us</h2>
+        <ul>
+          <li><a class="link" href="#">801 Barton Springs<br>Austin, TX 78704</a></li>
+          <li><a class="link" href="#">+1 (512) 815-3552</a></li>
+          <li><a class="link" href="#">info@hansenglobalconsult.com</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2 class="heading">Get Connected</h2>
+        <div class="social">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8h4.6v14H.2V8zm7.4 0h4.4v1.9h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.49 3.05 5.49 7.01V22h-4.6v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.27V22H7.6V8z"/></svg></a>
+          <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></a>
+          <a href="#" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottom-inner">
+      <p>Copyright © 2026 Hansen Global Consult.</p>
+      <div class="legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

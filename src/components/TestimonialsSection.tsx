@@ -13,13 +13,13 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "It has been a pleasure working with you…both the quality of the candidates and the accompanying materials were of a very high standard. I also received very positive feedback from the candidates…I particularly appreciated your approach to the entire process. At no point did we feel pressured to make a decision unless it was the right one. You consistently provided valuable guidance throughout the evaluation of candidates and demonstrated a strong understanding of what constitutes the right profile in alignment with our culture and values. I see your approach to executive search as highly attractive for Danish (Scandinavian) companies looking to expand in the U.S. market.",
+      "It has been a pleasure working with you…both the quality of the candidates and the accompanying materials were of a very high standard. I also received very positive feedback from the candidates…I particularly appreciated your approach to the entire process. At no point did we feel pressured to make a decision unless it was the right one. You consistently provided valuable guidance throughout the evaluation of candidates and demonstrated a strong understanding of what constitutes the right profile in alignment with our culture and values. I see your approach to executive search as highly attractive for companies looking to expand in the U.S. market.",
     author: "CEO, MedTech Company",
     meta: "(650 employees)",
   },
   {
     quote:
-      "Camilla hjalp os med rekruttering for en kritisk lederstilling for vores datterselskab i USA med stor succes…Jeg var dermed i stand til at ansætte en virkelig stærk kandidat, som driver min virksomhed fremad over alle forventninger…jeg (havde) også nogle selskabs tekniske spørgsmål, hvortil Camilla henviste mig til Gert…jeg var imponeret af hans grundige rådgivning. Det var en fornøjelse at arbejde sammen med både Camilla og Gert, og jeg kan anbefale dem til andre danske virksomheder.",
+      "Camilla hjalp os med rekruttering for en kritisk lederstilling for vores datterselskab i USA med stor succes…Jeg var dermed i stand til at ansætte en virkelig stærk kandidat, som driver min virksomhed fremad over alle forventninger…jeg (havde) også nogle selskabs tekniske spørgsmål, hvortil Camilla henviste mig til Gert…jeg var imponeret af hans grundige rådgivning. Det var en fornøjelse at arbejde sammen med både Camilla og Gert, og jeg kan anbefale dem til andre virksomheder.",
     author: "CEO, Health Care Company",
     meta: "(200 Employees)",
   },

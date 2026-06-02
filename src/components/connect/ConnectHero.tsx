@@ -1,20 +1,64 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowCircleRightIcon } from "@/components/icons";
 
+// Hero background loops through these videos in sequence. Each can carry its
+// own transform so it frames nicely against the green panel on the left.
+const HERO_VIDEOS = [
+  {
+    src: "/videos/connectvid1.mp4",
+    poster: "/videos/connectvid1-poster.jpg",
+    style: { transform: "translateX(10%) scaleX(-1.25) scaleY(1.25)" },
+  },
+  {
+    src: "/videos/connectvid2.mp4",
+    poster: "/videos/connectvid2-poster.jpg",
+    // Capitol video shown at natural dimensions — no zoom/mirror.
+    style: { transform: "none" },
+  },
+];
+
 export function ConnectHero() {
+  const [videoIndex, setVideoIndex] = useState(0);
+
+  // Optional ?vid=N (1-based) to preview a specific hero video, e.g. ?vid=2.
+  // Applied after mount so server and client first render agree (no hydration
+  // mismatch); the param just jumps the starting point of the cycle.
+  useEffect(() => {
+    const n = Number(new URLSearchParams(window.location.search).get("vid"));
+    if (Number.isFinite(n) && n >= 1 && n <= HERO_VIDEOS.length) {
+      setVideoIndex(n - 1);
+    }
+  }, []);
+
+  const current = HERO_VIDEOS[videoIndex];
+
   return (
     <section
       data-hero
       className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
     >
-      {/* Background photo layer */}
-      <div
+      {/* Background video layer — cycles through HERO_VIDEOS */}
+      <video
+        key={current.src}
         aria-hidden="true"
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url(/images/austinabanner.jpg)",
+        autoPlay
+        muted
+        playsInline
+        poster={current.poster}
+        onEnded={() =>
+          setVideoIndex((i) => (i + 1) % HERO_VIDEOS.length)
+        }
+        ref={(el) => {
+          if (el) el.playbackRate = 0.5;
         }}
-      />
+        style={current.style}
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+      >
+        <source src={current.src} type="video/mp4" />
+      </video>
 
       {/* Centered 1200px container so the green panel aligns with header */}
       <div className="relative z-10 mx-auto h-full w-full xl:max-w-[1200px]">

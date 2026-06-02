@@ -36,7 +36,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "OERTZENGroup - Executive Search - Professional Recruitment",
+  title: "Hansen Global Consult - Executive Search - Professional Recruitment",
   description:
     "We are an Executive Search and Professional Recruitment firm serving European clients with an established footprint in North America as well as those looking to enter these markets.",
   icons: {
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     apple: "/seo/apple-touch-icon.png",
   },
   openGraph: {
-    title: "OERTZENGroup - Executive Search - Professional Recruitment",
+    title: "Hansen Global Consult - Executive Search - Professional Recruitment",
     description:
       "We are an Executive Search and Professional Recruitment firm serving European clients with an established footprint in North America as well as those looking to enter these markets.",
-    siteName: "OERTZENGroup",
+    siteName: "Hansen Global Consult",
     locale: "en_US",
     type: "website",
   },

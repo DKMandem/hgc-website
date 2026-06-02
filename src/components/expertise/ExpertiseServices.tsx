@@ -22,8 +22,8 @@ const SERVICES: Service[] = [
     id: "executive-search",
     tab: "Executive Search",
     eyebrow: "Executive Search · Professional Recruitment",
-    tagline: "Secure leaders who shape your future",
-    taglineHighlight: "shape your future",
+    tagline: "Secure leaders who shape your future success",
+    taglineHighlight: "shape your future success",
     intro: [
       {
         text: "Leadership appointments are among the most important decisions a company makes. We bring the structure, market knowledge, and discretion those decisions require.",

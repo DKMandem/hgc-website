@@ -53,3 +53,6 @@ temp/
 /*.jpg
 /*.jpeg
 .playwright-mcp/
+
+# Local git worktrees
+.claude/worktrees/
