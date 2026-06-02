@@ -7,7 +7,7 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Camilla is an exceptionally thorough and conscientious recruiter. She takes the time to deeply understand a company's strategic direction and how a role can create both short- and long-term impact. Her structured methodology consistently identifies not just strong candidates, but outstanding talent. Her professionalism and insight left a lasting impression, and I recommend her without hesitation.",
+      "Hansen Global Consult is an exceptionally thorough and conscientious search partner. The team takes the time to deeply understand a company's strategic direction and how a role can create both short- and long-term impact. Their structured methodology consistently identifies not just strong candidates, but outstanding talent. Their professionalism and insight left a lasting impression, and we recommend them without hesitation.",
     author: "General Manager, IT Software Company",
     meta: "(700 Employees)",
   },
