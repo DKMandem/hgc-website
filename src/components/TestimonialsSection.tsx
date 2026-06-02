@@ -13,7 +13,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "It has been a pleasure working with you…both the quality of the candidates and the accompanying materials were of a very high standard. I also received very positive feedback from the candidates…I particularly appreciated your approach to the entire process. At no point did we feel pressured to make a decision unless it was the right one. You consistently provided valuable guidance throughout the evaluation of candidates and demonstrated a strong understanding of what constitutes the right profile in alignment with our culture and values. I see your approach to executive search as highly attractive for companies looking to expand in the U.S. market.",
+      "It has been a pleasure working with Hansen Global Consult… both the quality of the candidates and the accompanying materials were of a very high standard. I also received very positive feedback from the candidates… I particularly appreciated the firm's approach to the entire process. At no point did we feel pressured to make a decision unless it was the right one. The team consistently provided valuable guidance throughout the evaluation of candidates and demonstrated a strong understanding of what constitutes the right profile in alignment with our culture and values. I see Hansen Global Consult's approach to executive search as highly attractive for companies looking to expand in the U.S. market.",
     author: "CEO, MedTech Company",
     meta: "(650 employees)",
   },
