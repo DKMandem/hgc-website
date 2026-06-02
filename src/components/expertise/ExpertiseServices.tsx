@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Pillar = { title: string; points: string[] };
 
@@ -161,6 +161,13 @@ function ImpactText({ text, highlight }: { text: string; highlight?: string }) {
 export function ExpertiseServices() {
   const [active, setActive] = useState(0);
   const service = SERVICES[active];
+
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("service");
+    if (!requested) return;
+    const index = SERVICES.findIndex((s) => s.id === requested);
+    if (index !== -1) setActive(index);
+  }, []);
 
   return (
     <section className="w-full bg-white px-[30px] py-[80px] lg:py-[90px]">
