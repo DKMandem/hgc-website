@@ -13,7 +13,7 @@ const INDUSTRIES: Industry[] = [
     name: "Robotic & Automation",
     image: "/images/industry-RoboticandAutomation.jpg",
     // Robot sits left-of-center; pull the crop left so it centers in frame.
-    position: "35% center",
+    position: "25% center",
   },
   { name: "IT & Data Centers", image: "/images/industry-itanddatacenter.webp" },
   { name: "Manufacturing", image: "/images/industry-manufactoring.webp" },
