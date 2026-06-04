@@ -27,7 +27,7 @@ const posts: BlogPost[] = [
 export function BlogSection() {
   return (
     <section
-      className="relative bg-[url(/images/blog-parallax.jpg)] bg-cover bg-center bg-no-repeat bg-scroll px-[30px] py-[50px] md:px-[30px] md:py-[90px] xl:bg-fixed xl:px-0 xl:py-[150px]"
+      className="relative bg-cover bg-center bg-no-repeat bg-scroll px-[30px] py-[50px] md:px-[30px] md:py-[90px] xl:bg-fixed xl:px-0 xl:py-[150px]"
     >
       <div
         className="absolute inset-0 bg-[#ffffff] opacity-70"

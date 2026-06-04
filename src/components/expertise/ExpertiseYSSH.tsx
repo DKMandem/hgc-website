@@ -7,7 +7,6 @@ export function ExpertiseYSSH({ reverse = false }: { reverse?: boolean }) {
       <div
         aria-hidden="true"
         className="min-h-[280px] w-full bg-cover bg-center lg:min-h-[500px] lg:w-1/2"
-        style={{ backgroundImage: "url(/images/howwehelp-left.jpg)" }}
       />
 
       {/* Right: copy */}
