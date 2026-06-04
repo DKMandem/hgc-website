@@ -83,7 +83,7 @@ export function TopHeader() {
           >
             <span className="relative -ml-[8px] mr-[2px] h-[56px] w-[56px] shrink-0">
               <Image
-                src="/images/site-icon.png"
+                src="/images/hgc-logo-lightest-transparent.png"
                 alt=""
                 width={56}
                 height={56}
@@ -94,7 +94,7 @@ export function TopHeader() {
                 )}
               />
               <Image
-                src="/images/logo-reverse.png"
+                src="/images/CircleLogo.png"
                 alt=""
                 width={56}
                 height={56}
