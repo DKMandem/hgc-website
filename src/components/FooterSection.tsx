@@ -69,7 +69,7 @@ export function FooterSection() {
         <div className="md:col-span-2 lg:col-span-1">
           <div className="mb-[16px] flex items-center gap-[10px]">
             <Image
-              src="/images/hgc-logo-lightest-transparent.png"
+              src="/images/site-icon.png"
               alt=""
               width={56}
               height={56}
