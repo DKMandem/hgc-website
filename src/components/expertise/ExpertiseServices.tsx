@@ -107,8 +107,8 @@ const SERVICES: Service[] = [
   },
   {
     id: "leadership-advisory",
-    tab: "Leadership Development",
-    eyebrow: "Leadership Development Services",
+    tab: "Leadership Advisory",
+    eyebrow: "Leadership Advisory Services",
     tagline: "Our process turns leadership potential into measurable performance",
     taglineHighlight: "measurable performance",
     intro: [

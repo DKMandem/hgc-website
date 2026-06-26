@@ -65,7 +65,7 @@ export function SSCSection() {
             }}
           >
             Hansen Global Consult brings more than 15 years of international
-            executive search, recruitment, and leadership development experience
+            executive search, recruitment, and leadership advisory experience
             gained through globally respected organizations, including the
             European Parliament, Mercuri Urval, and the World Bank Group in
             Washington, D.C.

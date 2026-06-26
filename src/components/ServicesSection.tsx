@@ -23,7 +23,7 @@ const SERVICES: Service[] = [
     href: "/expertise?service=talent-assessment",
   },
   {
-    title: "Leadership Development",
+    title: "Leadership Advisory",
     description:
       "We help companies develop leadership and team capabilities to unlock potential and drive stronger business results.",
     image: "/images/services/leadershipadvisory.png",

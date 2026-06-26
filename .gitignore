@@ -56,3 +56,4 @@ temp/
 
 # Local git worktrees
 .claude/worktrees/
+.devserver.log

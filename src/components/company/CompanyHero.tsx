@@ -47,7 +47,7 @@ export function CompanyHero() {
                 textAlign: "center",
               }}
             >
-              Executive Search · Professional Recruitment · Leadership Development
+              Executive Search · Professional Recruitment · Leadership Advisory
             </p>
 
             <p

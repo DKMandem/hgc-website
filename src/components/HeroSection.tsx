@@ -76,7 +76,7 @@ export function HeroSection() {
               textAlign: "center",
             }}
           >
-            Executive Search · Professional Recruitment&nbsp;· Leadership Development
+            Executive Search · Professional Recruitment · Leadership Advisory
           </p>
 
           <p
@@ -97,7 +97,7 @@ export function HeroSection() {
             professional recruitment firm serving companies looking to expand
             across North America. We specialize in C-suite executives,
             commercial leaders, and mid-management professionals, and partner
-            with clients on talent assessment and leadership development to
+            with clients on talent assessment and leadership advisory to
             support confident, growth-driven people decisions.
           </p>
 

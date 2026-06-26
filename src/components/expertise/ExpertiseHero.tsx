@@ -12,7 +12,7 @@ export function ExpertiseHero() {
         aria-hidden="true"
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url(/images/handshakelady.png)",
+          backgroundImage: "url(/images/handshakelady2.jpg)",
         }}
       />
 
@@ -45,7 +45,7 @@ export function ExpertiseHero() {
                 textAlign: "center",
               }}
             >
-              Executive Search · Professional Recruitment · Leadership Development
+              Executive Search · Professional Recruitment · Leadership Advisory
             </p>
 
             <p
