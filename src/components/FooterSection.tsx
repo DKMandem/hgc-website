@@ -15,7 +15,7 @@ const contactLinks: ReadonlyArray<{
   href: string;
   external?: boolean;
 }> = [
-  { label: "+1 (512) 815-3552", href: "tel:+15128153552" },
+  { label: "+1 (512) 900-1448", href: "tel:+15129001448" },
   {
     label: "info@hansenglobalconsult.com",
     href: "mailto:info@hansenglobalconsult.com?subject=Message%20from%20Hansen%20Global%20Consult%20Website",
@@ -44,7 +44,7 @@ const socialLinks: ReadonlyArray<{
   },
   {
     label: "Phone",
-    href: "tel:+15128153552",
+    href: "tel:+15129001448",
     Icon: PhoneIcon,
   },
 ];
