@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "berghansen.com",
+  "Id": "f32a0871-f559-4dd6-875d-c345f499124d"
+}
