@@ -93,7 +93,7 @@ export function HeroSection() {
               textAlign: "justify",
             }}
           >
-            Hansen Global Consult is a retained executive search and
+            Berg Hansen is a retained executive search and
             professional recruitment firm serving companies looking to expand
             across North America. We specialize in C-suite executives,
             commercial leaders, and mid-management professionals, and partner

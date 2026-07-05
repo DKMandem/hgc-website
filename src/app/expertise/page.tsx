@@ -6,7 +6,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { ContactSection } from "@/components/connect/ContactSection";
 
 export const metadata = {
-  title: "Expertise - Hansen Global Consult",
+  title: "Expertise - Berg Hansen",
   description:
     "Multicultural executive search firm finding high-quality candidates for mid- to senior-level management positions.",
 };

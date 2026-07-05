@@ -7,13 +7,13 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Hansen Global Consult is an exceptionally thorough and conscientious search partner. The team takes the time to deeply understand a company's strategic direction and how a role can create both short- and long-term impact. Their structured methodology consistently identifies not just strong candidates, but outstanding talent. Their professionalism and insight left a lasting impression, and we recommend them without hesitation.",
+      "Berg Hansen is an exceptionally thorough and conscientious search partner. The team takes the time to deeply understand a company's strategic direction and how a role can create both short- and long-term impact. Their structured methodology consistently identifies not just strong candidates, but outstanding talent. Their professionalism and insight left a lasting impression, and we recommend them without hesitation.",
     author: "General Manager, IT Software Company",
     meta: "(700 Employees)",
   },
   {
     quote:
-      "It has been a pleasure working with Hansen Global Consult… both the quality of the candidates and the accompanying materials were of a very high standard. I also received very positive feedback from the candidates… I particularly appreciated the firm's approach to the entire process. At no point did we feel pressured to make a decision unless it was the right one. The team consistently provided valuable guidance throughout the evaluation of candidates and demonstrated a strong understanding of what constitutes the right profile in alignment with our culture and values. I see Hansen Global Consult's approach to executive search as highly attractive for companies looking to expand in the U.S. market.",
+      "It has been a pleasure working with Berg Hansen… both the quality of the candidates and the accompanying materials were of a very high standard. I also received very positive feedback from the candidates… I particularly appreciated the firm's approach to the entire process. At no point did we feel pressured to make a decision unless it was the right one. The team consistently provided valuable guidance throughout the evaluation of candidates and demonstrated a strong understanding of what constitutes the right profile in alignment with our culture and values. I see Berg Hansen's approach to executive search as highly attractive for companies looking to expand in the U.S. market.",
     author: "CEO, MedTech Company",
     meta: "(650 employees)",
   },

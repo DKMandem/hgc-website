@@ -106,7 +106,7 @@ export function HowWeHelpSection() {
         >
           <Image
             src="/images/office-building.jpg"
-            alt="Hansen Global Consult office"
+            alt="Berg Hansen office"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="object-cover"

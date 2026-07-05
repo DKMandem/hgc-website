@@ -7,7 +7,7 @@ import { ReadyToTalkSection } from "@/components/company/ReadyToTalkSection";
 import { ContactSection } from "@/components/connect/ContactSection";
 
 export const metadata = {
-  title: "Company - Hansen Global Consult",
+  title: "Company - Berg Hansen",
   description:
     "We connect European companies with highly qualified and culturally compatible candidates.",
 };

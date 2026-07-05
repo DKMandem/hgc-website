@@ -46,7 +46,7 @@ export function SSCSection() {
               textAlign: "justify",
             }}
           >
-            At Hansen Global Consult, we help companies identify and secure the
+            At Berg Hansen, we help companies identify and secure the
             executive and commercial leadership talent needed to accelerate
             growth in the U.S. market. Whether you are seeking your next C-suite
             executive, senior commercial leader, or Specialist, we connect
@@ -64,7 +64,7 @@ export function SSCSection() {
               textAlign: "justify",
             }}
           >
-            Hansen Global Consult brings more than 15 years of international
+            Berg Hansen brings more than 15 years of international
             executive search, recruitment, and leadership advisory experience
             gained through globally respected organizations, including the
             European Parliament, Mercuri Urval, and the World Bank Group in
@@ -103,7 +103,7 @@ export function SSCSection() {
             }}
           >
             If your company is expanding in the U.S. market, we would welcome the
-            opportunity to discuss how Hansen Global Consult can support your
+            opportunity to discuss how Berg Hansen can support your
             growth.
           </p>
 

@@ -61,7 +61,7 @@ export function ExpertiseHero() {
                 textAlign: "justify",
               }}
             >
-              At Hansen Global Consult, we combine over 15 years of executive
+              At Berg Hansen, we combine over 15 years of executive
               search and talent advisory experience to help companies secure
               leadership that delivers measurable impact.
             </p>

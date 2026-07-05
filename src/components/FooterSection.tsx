@@ -17,8 +17,8 @@ const contactLinks: ReadonlyArray<{
 }> = [
   { label: "+1 (512) 900-1448", href: "tel:+15129001448" },
   {
-    label: "info@hansenglobalconsult.com",
-    href: "mailto:info@hansenglobalconsult.com?subject=Message%20from%20Hansen%20Global%20Consult%20Website",
+    label: "info@berghansen.com",
+    href: "mailto:info@berghansen.com?subject=Message%20from%20Berg%20Hansen%20Website",
   },
   {
     label: "801 Barton Springs\nAustin, TX 78704",
@@ -39,7 +39,7 @@ const socialLinks: ReadonlyArray<{
   },
   {
     label: "Email",
-    href: "mailto:info@hansenglobalconsult.com?subject=Message%20from%20Hansen%20Global%20Consult%20Website",
+    href: "mailto:info@berghansen.com?subject=Message%20from%20Berg%20Hansen%20Website",
     Icon: EnvelopeIcon,
   },
   {
@@ -67,22 +67,17 @@ export function FooterSection() {
       <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:items-start lg:gap-[40px]">
         {/* Brand column */}
         <div className="md:col-span-2 lg:col-span-1">
-          <div className="mb-[16px] flex items-center gap-[10px]">
+          <div className="mb-[16px] flex flex-col gap-[10px]">
             <Image
-              src="/images/hgc-logo-lightest-transparent.png"
-              alt=""
-              width={56}
+              src="/images/logo-berghansen-light.png"
+              alt="Berg Hansen"
+              width={203}
               height={56}
-              className="h-[56px] w-[56px] shrink-0 object-contain"
+              className="h-[56px] w-auto object-contain object-left"
             />
-            <div className="flex flex-col">
-              <span className="font-sans text-[22px] font-bold leading-none tracking-tight text-white">
-                Hansen Global Consult
-              </span>
-              <span className="mt-[6px] font-sans text-[12px] font-light tracking-[1px] text-white/70">
-                Great people build great companies
-              </span>
-            </div>
+            <span className="font-sans text-[12px] font-light tracking-[1px] text-white/70">
+              Great people build great companies
+            </span>
           </div>
         </div>
 
@@ -154,7 +149,7 @@ export function FooterSection() {
 
       <div className="mx-auto mt-[30px] max-w-[1140px] border-t border-white/10 pt-[20px]">
         <p className="pl-[11px] font-sans text-[12px] font-medium text-white/70">
-          Copyright &copy; 2026 Hansen Global Consult.
+          Copyright &copy; 2026 Berg Hansen.
         </p>
       </div>
     </footer>

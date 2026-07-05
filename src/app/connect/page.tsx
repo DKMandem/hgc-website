@@ -5,7 +5,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { ContactSection } from "@/components/connect/ContactSection";
 
 export const metadata = {
-  title: "Connect - Hansen Global Consult",
+  title: "Connect - Berg Hansen",
   description:
     "Get in touch for executive recruitment questions, comments, or appointment requests.",
 };

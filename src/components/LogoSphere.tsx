@@ -111,7 +111,7 @@ export function LogoSphere({ ramp, className, ...rest }: LogoSphereProps) {
       viewBox="0 0 1254 1254"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Hansen Global Consult"
+      aria-label="Berg Hansen"
       className={className}
       {...rest}
     >

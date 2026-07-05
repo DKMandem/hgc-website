@@ -21,7 +21,7 @@ const initialState: ContactFormState = {
   message: "",
 };
 
-// Web3Forms access key tied to info@hansenglobalconsult.com.
+// Web3Forms access key tied to info@berghansen.com.
 // Generate one (free) at https://web3forms.com using that inbox, then paste it here.
 // This key is safe to expose client-side.
 const WEB3FORMS_ACCESS_KEY = "eb0d75e9-9107-461e-b227-affbc9f3f9fe";
@@ -78,8 +78,8 @@ export function ContactSection() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: "New contact form submission — Hansen Global Consult",
-          from_name: "Hansen Global Consult Website",
+          subject: "New contact form submission — Berg Hansen",
+          from_name: "Berg Hansen Website",
           name: `${form.firstName} ${form.lastName}`.trim(),
           first_name: form.firstName,
           last_name: form.lastName,
@@ -106,7 +106,7 @@ export function ContactSection() {
     } catch {
       setStatus("error");
       setFeedback(
-        "Network error. Please try again or email info@hansenglobalconsult.com directly.",
+        "Network error. Please try again or email info@berghansen.com directly.",
       );
     }
   };
@@ -260,7 +260,7 @@ export function ContactSection() {
           >
             <Image
               src="/images/office-building.jpg"
-              alt="Hansen Global Consult office"
+              alt="Berg Hansen office"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"

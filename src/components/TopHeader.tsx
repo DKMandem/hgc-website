@@ -72,46 +72,40 @@ export function TopHeader() {
             Once scrolled past the hero it fades to the same gray as the nav. */}
         <div
           className={cn(
-            "flex w-auto flex-1 items-center pl-[10px] pr-[20px] transition-colors duration-300 ease-[ease] md:w-1/2 md:flex-none",
+            "flex w-auto flex-1 items-center pl-[25px] pr-[20px] transition-colors duration-300 ease-[ease] md:w-1/2 md:flex-none",
             scrolled ? "bg-[#DEDEDE]" : "bg-[#124336]",
           )}
         >
           <Link
             href="/"
             className="flex shrink-0 items-center"
-            aria-label="Hansen Global Consult — Home"
+            aria-label="Berg Hansen — Home"
           >
-            <span className="relative -ml-[8px] mr-[2px] h-[56px] w-[56px] shrink-0">
+            <span className="relative block h-[70px] w-[206px] shrink-0">
+              {/* Light wordmark for the dark-green header state */}
               <Image
-                src="/images/hgc-logo-lightest-transparent.png"
-                alt=""
-                width={56}
-                height={56}
+                src="/images/logo-berghansen-light.png"
+                alt="Berg Hansen"
+                width={206}
+                height={70}
                 priority
                 className={cn(
-                  "absolute inset-0 h-[56px] w-[56px] object-contain transition-opacity duration-300 ease-[ease]",
+                  "absolute inset-0 h-[70px] w-[206px] object-contain object-left transition-opacity duration-300 ease-[ease]",
                   scrolled ? "opacity-0" : "opacity-100",
                 )}
               />
+              {/* Dark-grey wordmark for the scrolled light-gray header state */}
               <Image
-                src="/images/CircleLogo.png"
+                src="/images/logo-berghansen-darkgrey.png"
                 alt=""
-                width={56}
-                height={56}
+                width={206}
+                height={70}
                 priority
                 className={cn(
-                  "absolute inset-0 h-[56px] w-[56px] object-contain transition-opacity duration-300 ease-[ease]",
+                  "absolute inset-0 h-[70px] w-[206px] object-contain object-left transition-opacity duration-300 ease-[ease]",
                   scrolled ? "opacity-100" : "opacity-0",
                 )}
               />
-            </span>
-            <span
-              className={cn(
-                "truncate font-sans text-[17px] font-bold leading-none tracking-tight transition-colors duration-300 ease-[ease] sm:text-[22px] md:text-[28px]",
-                scrolled ? "text-[#124336]" : "text-white",
-              )}
-            >
-              Hansen Global Consult
             </span>
           </Link>
         </div>

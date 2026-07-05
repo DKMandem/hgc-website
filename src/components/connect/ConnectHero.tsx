@@ -107,7 +107,7 @@ export function ConnectHero() {
                 textAlign: "justify",
               }}
             >
-              Here at Hansen Global Consult, we are committed to providing you with
+              Here at Berg Hansen, we are committed to providing you with
               excellence in executive recruitment services regardless of your
               business size and industry.
             </p>
