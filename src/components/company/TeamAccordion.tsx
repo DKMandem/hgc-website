@@ -99,9 +99,13 @@ export function TeamAccordion() {
                   backgroundImage: `url(${member.img})`,
                   backgroundSize: "cover",
                   backgroundPosition: member.objectPosition ?? "50% 30%",
-                  filter: member.brightness
-                    ? `brightness(${member.brightness})`
-                    : undefined,
+                  filter:
+                    [
+                      member.brightness ? `brightness(${member.brightness})` : null,
+                      member.saturate ? `saturate(${member.saturate})` : null,
+                    ]
+                      .filter(Boolean)
+                      .join(" ") || undefined,
                   transform:
                     [
                       member.zoom ? `scale(${member.zoom})` : null,
