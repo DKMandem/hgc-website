@@ -12,7 +12,7 @@ export function CompanyHero() {
         aria-hidden="true"
         className="absolute inset-0 z-0 bg-cover"
         style={{
-          backgroundImage: "url(/images/middleagehandshakelady-fixd.png)",
+          backgroundImage: "url(/images/middleagehandshakelady-fixd-retouched-v2.webp)",
           backgroundPosition: "68% 50%",
         }}
       />
