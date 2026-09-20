@@ -52,18 +52,6 @@ export const team: TeamMember[] = [
     quote: "Great companies are built by great people — our job is to find and secure them.",
   },
   {
-    slug: "anna-berg-hansen",
-    name: "Anna Berg Hansen",
-    title: "Collaborating Partner",
-    img: "/images/team/anna2.png",
-    aspect: 0.79,
-    brightness: 1.1,
-    linkedin: "https://www.linkedin.com/in/annaberghansen/",
-    email: "anna@berghansen.com",
-    bio: "Anna specializes in executive search for commercial leadership roles supporting U.S. market expansion across IT, MedTech, and energy sectors. Drawing on experience with companies including Google, Apple, GE, UNICEF, and the Court of Justice of the European Union, she brings a strategic and commercially grounded approach to leadership hiring. Anna focuses on identifying leaders with the judgment, credibility, and execution capability needed to drive growth and deliver results in complex markets.",
-    quote: "The best placements happen when both sides feel truly understood.",
-  },
-  {
     slug: "rikke-malmberg",
     name: "Rikke Malmberg",
     title: "Executive Search Consultant",
