@@ -41,7 +41,7 @@ export const team: TeamMember[] = [
   {
     slug: "camilla-daniels-hansen",
     name: "Camilla Daniels Hansen",
-    title: "Managing Partner",
+    title: "CEO & Founder",
     img: "/images/team/camilla2done.jpg",
     aspect: 1.0,
     zoom: 1.45,
