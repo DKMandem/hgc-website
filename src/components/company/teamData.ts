@@ -1,7 +1,7 @@
 // Team members shown in the interactive "Meet the Team" accordion (TeamSection).
 // Names, titles, photos, LinkedIn URLs and bios are real. NOTE: emails follow a placeholder
 // pattern (first@berghansen.com) and most quotes are still placeholder — replace the
-// quotes/emails (and Julia's and Donovan's bios) with final copy before launch.
+// quotes/emails (and Julia's bio) with final copy before launch.
 
 export type TeamMember = {
   slug: string;
@@ -102,18 +102,5 @@ export const team: TeamMember[] = [
     quote: "We start with the business goal — the right people follow from there.",
     logo: "/images/team/stimulus2logo.png",
     logoHeight: 74,
-  },
-  {
-    slug: "donovan-daniels",
-    name: "Donovan Daniels",
-    title: "Head of Technology & AI Systems",
-    img: "/images/team/donovan.jpg",
-    aspect: 1.0,
-    zoom: 1.02,
-    saturate: 0.8,
-    shiftY: -1.3,
-    email: "donovan@berghansen.com",
-    bio: "Donovan leads Berg Hansen's technology and AI systems, building the tools and infrastructure that power the firm's search and advisory work — from candidate research to client-facing platforms. His focus is on applying technology deliberately so the team can move faster and deliver sharper results for clients.",
-    quote: "The best technology disappears into the work — it just makes everyone faster.",
   },
 ];
