@@ -47,7 +47,7 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/camillaberghansen/",
     email: "camilla@berghansen.com",
     bio: "Camilla Hansen is an executive search and leadership advisory professional with 15+ years of international experience connecting exceptional leaders with ambitious organizations. As Founder of Berg Hansen, she specializes in recruiting C-suite executives, commercial leaders, and specialists across North America. Her background includes executive search and talent advisory roles with the European Parliament, Mercuri Urval, and the World Bank Group, where she developed a reputation for identifying leaders who accelerate growth, strengthen culture, and create lasting business impact.",
-    quote: "Great companies are built by great people — our job is to find and secure them.",
+    quote: "Great companies are built by great people, our job is to find and secure them.",
   },
   {
     slug: "rikke-malmberg",
@@ -68,8 +68,8 @@ export const team: TeamMember[] = [
     aspect: 0.67,
     linkedin: "https://www.linkedin.com/in/julia-daniels-17375b198",
     email: "julia@berghansen.com",
-    bio: "Julia keeps every engagement moving — coordinating timelines, candidates and client communication so each search runs smoothly from kickoff to placement. She is the operational backbone that keeps our process organised and on schedule.",
-    quote: "A great search is a well-run search.",
+    bio: "Julia keeps every engagement moving — coordinating timelines, candidates and client communication so each search runs smoothly from kickoff to placement. She is the operational backbone that keeps our process organized and on schedule.",
+    quote: "Every detail handled, so every search moves forward.",
   },
   {
     slug: "marcus-honkanen",
@@ -80,7 +80,7 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/marcushonkanen/",
     email: "marcus@berghansen.com",
     bio: "Marcus is an expert in Executive Search, with more than 20 years of international experience. Before becoming an entrepreneur in 2015, he was Managing Director and Partner in Executive Search on an international level at Kienbaum. One of his special talents is bringing people together from very different backgrounds. He uses his intercultural skills to facilitate this effectively, as well as his expertise and network spanning a wide range of industries within the Nordics and DACH.",
-    quote: "Bringing people together – that’s my passion.",
+    quote: "Bringing people together, that’s my passion.",
     logo: "/images/team/nordic-minds-logo.png",
   },
   {
@@ -92,8 +92,18 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/yolanda-nokuri-hegngi-18173018/",
     email: "yolanda@berghansen.com",
     bio: "With over 30 years working with global executives and organizations to generate unique solutions to complex challenges and ambiguous problems, Yolanda provides strategic leadership advisory services designed to enhance and accelerate executive performance, organizational culture, and decision-making. Her key pillars include executive coaching, strategic advisory, leadership onboarding and transition acceleration, and change management and team alignment.",
-    quote: "We start with the business goal — the right people follow from there.",
+    quote: "We start with the business goal, the right people follow from there.",
     logo: "/images/team/stimulus2logo.png",
     logoHeight: 74,
+  },
+  {
+    slug: "jens-holstebro",
+    name: "Jens Holstebro",
+    title: "Strategic Advisor – MedTech, Digital Health & Software",
+    img: "/images/team/jens-headshot.webp",
+    aspect: 0.9,
+    linkedin: "https://www.linkedin.com/in/jensholstebro/",
+    bio: "Jens Holstebro brings more than 30 years of commercial leadership experience across Europe and North America, specializing in U.S. market expansion, go-to-market strategies, and business growth. He has held senior executive positions with European and American companies across MedTech, healthcare, technology, and SaaS. As President and CEO of a North American business owned by a leading Danish MedTech group, he led a successful turnaround, increasing revenue tenfold and overseeing a successful exit. His expertise spans commercial strategy, direct and channel sales, and building high-performing organizations in complex markets. With extensive experience helping European businesses succeed in the U.S., Jens understands the commercial and cultural challenges of transatlantic expansion. As a Strategic Advisor to Berg Hansen, he supports Danish companies in strengthening commercial leadership and driving sustainable U.S. growth.",
+    quote: "Succeeding in the U.S. takes more than a great product, it takes the right commercial leadership.",
   },
 ];
