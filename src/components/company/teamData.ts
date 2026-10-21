@@ -64,7 +64,7 @@ export const team: TeamMember[] = [
     slug: "julia-daniels",
     name: "Julia Daniels",
     title: "Project Manager",
-    img: "/images/team/julia-headshot.webp",
+    img: "/images/team/julia-headshot-2.webp",
     aspect: 0.67,
     linkedin: "https://www.linkedin.com/in/julia-daniels-17375b198",
     email: "julia@berghansen.com",
