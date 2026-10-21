@@ -46,7 +46,7 @@ export const team: TeamMember[] = [
     aspect: 1.0,
     linkedin: "https://www.linkedin.com/in/camillaberghansen/",
     email: "camilla@berghansen.com",
-    bio: "Camilla Hansen is an executive search and leadership advisory professional with 15+ years of international experience connecting exceptional leaders with ambitious organizations. As Founder of Berg Hansen, she specializes in recruiting C-suite executives, commercial leaders, and specialists across North America. Her background includes executive search and talent advisory roles with the European Parliament, Mercuri Urval, and the World Bank Group, where she developed a reputation for identifying leaders who accelerate growth, strengthen culture, and create lasting business impact.",
+    bio: "Camilla Berg is an executive search and leadership advisory professional with 15+ years of international experience connecting exceptional leaders with ambitious organizations. As Founder of Berg Hansen, she specializes in recruiting C-suite executives, commercial leaders, and specialists across North America. Her background includes executive search and talent advisory roles with the European Parliament, Mercuri Urval, and the World Bank Group, where she developed a reputation for identifying leaders who accelerate growth, strengthen culture, and create lasting business impact.",
     quote: "Great companies are built by great people, our job is to find and secure them.",
   },
   {
