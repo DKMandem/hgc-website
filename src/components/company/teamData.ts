@@ -84,6 +84,16 @@ export const team: TeamMember[] = [
     logo: "/images/team/nordic-minds-logo.png",
   },
   {
+    slug: "jens-holstebro",
+    name: "Jens Holstebro",
+    title: "Strategic Advisor – MedTech, Digital Health & Software",
+    img: "/images/team/jens-headshot.webp",
+    aspect: 0.9,
+    linkedin: "https://www.linkedin.com/in/jensholstebro/",
+    bio: "Jens Holstebro brings more than 30 years of commercial leadership experience across Europe and North America, specializing in U.S. market expansion, go-to-market strategies, and business growth. He has held senior executive positions with European and American companies across MedTech, healthcare, technology, and SaaS. As President and CEO of a North American business owned by a leading Danish MedTech group, he led a successful turnaround, increasing revenue tenfold and overseeing a successful exit. His expertise spans commercial strategy, direct and channel sales, and building high-performing organizations in complex markets. With extensive experience helping European businesses succeed in the U.S., Jens understands the commercial and cultural challenges of transatlantic expansion. As a Strategic Advisor to Berg Hansen, he supports Danish companies in strengthening commercial leadership and driving sustainable U.S. growth.",
+    quote: "Succeeding in the U.S. takes more than a great product, it takes the right commercial leadership.",
+  },
+  {
     slug: "yolanda-nokuri-hegngi",
     name: "Yolanda Nokuri Hegngi",
     title: "Partner, Executive Coach",
@@ -95,15 +105,5 @@ export const team: TeamMember[] = [
     quote: "We start with the business goal, the right people follow from there.",
     logo: "/images/team/stimulus2logo.png",
     logoHeight: 74,
-  },
-  {
-    slug: "jens-holstebro",
-    name: "Jens Holstebro",
-    title: "Strategic Advisor – MedTech, Digital Health & Software",
-    img: "/images/team/jens-headshot.webp",
-    aspect: 0.9,
-    linkedin: "https://www.linkedin.com/in/jensholstebro/",
-    bio: "Jens Holstebro brings more than 30 years of commercial leadership experience across Europe and North America, specializing in U.S. market expansion, go-to-market strategies, and business growth. He has held senior executive positions with European and American companies across MedTech, healthcare, technology, and SaaS. As President and CEO of a North American business owned by a leading Danish MedTech group, he led a successful turnaround, increasing revenue tenfold and overseeing a successful exit. His expertise spans commercial strategy, direct and channel sales, and building high-performing organizations in complex markets. With extensive experience helping European businesses succeed in the U.S., Jens understands the commercial and cultural challenges of transatlantic expansion. As a Strategic Advisor to Berg Hansen, he supports Danish companies in strengthening commercial leadership and driving sustainable U.S. growth.",
-    quote: "Succeeding in the U.S. takes more than a great product, it takes the right commercial leadership.",
   },
 ];
