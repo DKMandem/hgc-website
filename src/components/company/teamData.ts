@@ -27,6 +27,8 @@ export type TeamMember = {
   email?: string;
   /** Shown under "Our Advisors" instead of "Our Team". */
   advisor?: boolean;
+  /** Show a "Contact Us" button (jumps to the contact form) instead of "Connect on LinkedIn". */
+  contactButton?: boolean;
   /** Bio paragraph(s). Separate multiple paragraphs with a blank line ("\n\n"). */
   bio: string;
   /** Optional pull-quote shown beside the photo in the detail panel. */
@@ -75,6 +77,7 @@ export const team: TeamMember[] = [
   },
   {
     slug: "marcus-honkanen",
+    contactButton: true,
     name: "Marcus Honkanen",
     title: "Executive Search Partner, Europe",
     img: "/images/team/marcus-headshot.webp",
@@ -98,6 +101,7 @@ export const team: TeamMember[] = [
   },
   {
     slug: "yolanda-nokuri-hegngi",
+    contactButton: true,
     name: "Yolanda Nokuri Hegngi",
     title: "Partner, Executive Coach",
     img: "/images/team/yolanda-headshot.webp",

@@ -114,7 +114,7 @@ export function ContactSection() {
   return (
     <section
       id="more"
-      className="w-full bg-white py-[60px] px-[30px]"
+      className="w-full scroll-mt-[70px] bg-white py-[60px] px-[30px]"
     >
       <div className="mx-auto max-w-[1100px] flex flex-col lg:flex-row gap-[60px]">
         {/* Left column: contact form (~60%) */}

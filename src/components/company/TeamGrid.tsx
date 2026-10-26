@@ -122,13 +122,14 @@ function MemberCard({ member }: { member: TeamMember }) {
         ))}
       </div>
 
-      {/* LinkedIn button */}
-      {member.linkedin && (
+      {/* Contact Us (jumps to the contact form) or LinkedIn button */}
+      {(member.contactButton || member.linkedin) && (
         <div className="mt-7">
           <a
-            href={member.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={member.contactButton ? "#more" : member.linkedin}
+            {...(member.contactButton
+              ? {}
+              : { target: "_blank", rel: "noopener noreferrer" })}
             className="inline-flex items-center gap-3 border transition-colors hover:bg-[#127d68] hover:text-white"
             style={{
               borderColor: ACCENT,
@@ -139,7 +140,7 @@ function MemberCard({ member }: { member: TeamMember }) {
               padding: "10px 16px",
             }}
           >
-            Connect on LinkedIn
+            {member.contactButton ? "Contact Us" : "Connect on LinkedIn"}
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
