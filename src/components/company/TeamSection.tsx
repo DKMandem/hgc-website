@@ -11,17 +11,6 @@ export function TeamSection() {
         <h3 className="text-center font-sans text-[40px] font-bold leading-[1.1] tracking-[-1px] text-[#124336] xl:text-[54px]">
           Meet the Team
         </h3>
-        <p
-          className="mx-auto mt-4 max-w-[480px] text-center text-[#124336]"
-          style={{
-            fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
-            fontSize: "15px",
-            fontWeight: 300,
-            opacity: 0.7,
-          }}
-        >
-          Click a team member to read their profile.
-        </p>
       </div>
 
       <TeamGrid />

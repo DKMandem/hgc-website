@@ -1,7 +1,7 @@
 // Team members shown in the "Meet the Team" photo grid (TeamSection).
 // Names, titles, photos, LinkedIn URLs and bios are real. NOTE: emails follow a placeholder
 // pattern (first@berghansen.com) and most quotes are still placeholder — replace the
-// quotes/emails (and Julia's bio) with final copy before launch.
+// quotes/emails with final copy before launch.
 
 export type TeamMember = {
   slug: string;
@@ -70,7 +70,7 @@ export const team: TeamMember[] = [
     aspect: 0.67,
     linkedin: "https://www.linkedin.com/in/julia-daniels-17375b198",
     email: "julia@berghansen.com",
-    bio: "Julia keeps every engagement moving — coordinating timelines, candidates and client communication so each search runs smoothly from kickoff to placement. She is the operational backbone that keeps our process organized and on schedule.",
+    bio: "Julia keeps every engagement moving — coordinating timelines, candidates and client communication so each search runs smoothly from kickoff to placement. She is the operational backbone that keeps our process organized and on schedule. Beyond individual searches, she supports the team with market research, client onboarding and marketing, making sure Berg Hansen runs as smoothly behind the scenes as it does for our clients.",
     quote: "Every detail handled, so every search moves forward.",
   },
   {
