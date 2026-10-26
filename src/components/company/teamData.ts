@@ -29,6 +29,8 @@ export type TeamMember = {
   advisor?: boolean;
   /** Show a "Contact Us" button (jumps to the contact form) instead of "Connect on LinkedIn". */
   contactButton?: boolean;
+  /** Optional booking button (e.g. Calendly) shown under the LinkedIn/Contact button. */
+  schedule?: { label: string; url: string };
   /** Bio paragraph(s). Separate multiple paragraphs with a blank line ("\n\n"). */
   bio: string;
   /** Optional pull-quote shown beside the photo in the detail panel. */
@@ -50,6 +52,10 @@ export const team: TeamMember[] = [
     aspect: 0.87,
     linkedin: "https://www.linkedin.com/in/camillaberghansen/",
     email: "camilla@berghansen.com",
+    schedule: {
+      label: "Schedule a call (USA/Denmark)",
+      url: "https://calendly.com/camilla-berghansen/30-minutes-meeting-us",
+    },
     bio: "Camilla is an executive search and leadership advisory professional with 15+ years of international experience connecting exceptional leaders with ambitious organizations. As Founder of Berg Hansen, she specializes in recruiting C-suite executives, commercial leaders, and specialists across North America. Her background includes executive search and talent advisory roles with the European Parliament, Mercuri Urval, and the World Bank Group, where she developed a reputation for identifying leaders who accelerate growth, strengthen culture, and create lasting business impact.",
     quote: "Great companies are built by great people, our job is to find and secure them.",
   },

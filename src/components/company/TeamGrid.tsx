@@ -146,6 +146,29 @@ function MemberCard({ member }: { member: TeamMember }) {
         </div>
       )}
 
+      {/* Booking button (e.g. Calendly) */}
+      {member.schedule && (
+        <div className="mt-3">
+          <a
+            href={member.schedule.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-6 transition-opacity hover:opacity-85"
+            style={{
+              backgroundColor: GREEN,
+              color: "#ffffff",
+              fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
+              fontSize: "14px",
+              fontWeight: 600,
+              padding: "12px 16px",
+            }}
+          >
+            {member.schedule.label}
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+      )}
+
       {/* Affiliation logo */}
       {member.logo &&
         (member.logoLink ? (
