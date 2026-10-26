@@ -1,4 +1,4 @@
-import { TeamAccordion } from "./TeamAccordion";
+import { TeamGrid } from "./TeamGrid";
 
 export function TeamSection() {
   return (
@@ -20,11 +20,11 @@ export function TeamSection() {
             opacity: 0.7,
           }}
         >
-          Hover or tap a team member to highlight them and read their profile.
+          Click a team member to read their profile.
         </p>
       </div>
 
-      <TeamAccordion />
+      <TeamGrid />
     </section>
   );
 }

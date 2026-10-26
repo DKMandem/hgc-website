@@ -1,4 +1,4 @@
-// Team members shown in the interactive "Meet the Team" accordion (TeamSection).
+// Team members shown in the "Meet the Team" photo grid (TeamSection).
 // Names, titles, photos, LinkedIn URLs and bios are real. NOTE: emails follow a placeholder
 // pattern (first@berghansen.com) and most quotes are still placeholder — replace the
 // quotes/emails (and Julia's bio) with final copy before launch.
@@ -20,11 +20,13 @@ export type TeamMember = {
   /** Vertical nudge as a % of panel height. Positive = move the photo DOWN (exposes `fill` at top). */
   shiftY?: number;
   brightness?: number;
-  /** Colour saturation on the accordion photo (1 = unchanged, <1 mutes vibrancy, >1 boosts it). */
+  /** Colour saturation on the grid photo (1 = unchanged, <1 mutes vibrancy, >1 boosts it). */
   saturate?: number;
   objectPosition?: string;
   linkedin?: string;
   email?: string;
+  /** Shown under "Our Advisors" instead of "Our Team". */
+  advisor?: boolean;
   /** Bio paragraph(s). Separate multiple paragraphs with a blank line ("\n\n"). */
   bio: string;
   /** Optional pull-quote shown beside the photo in the detail panel. */
@@ -87,6 +89,7 @@ export const team: TeamMember[] = [
     slug: "jens-holstebro",
     name: "Jens Holstebro",
     title: "Strategic Advisor – MedTech, Digital Health & Software",
+    advisor: true,
     img: "/images/team/jens-headshot.webp",
     aspect: 0.9,
     linkedin: "https://www.linkedin.com/in/jensholstebro/",
