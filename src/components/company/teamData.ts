@@ -76,7 +76,7 @@ export const team: TeamMember[] = [
   {
     slug: "marcus-honkanen",
     name: "Marcus Honkanen",
-    title: "Senior Executive Search Partner, Europe",
+    title: "Executive Search Partner, Europe",
     img: "/images/team/marcus-headshot.webp",
     aspect: 1.0,
     linkedin: "https://www.linkedin.com/in/marcushonkanen/",
