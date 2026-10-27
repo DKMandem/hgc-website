@@ -114,6 +114,7 @@ function MemberCard({ member }: { member: TeamMember }) {
               lineHeight: "25px",
               fontWeight: 300,
               color: "#2a4a40",
+              textAlign: "justify",
               marginTop: i === 0 ? 0 : "14px",
             }}
           >

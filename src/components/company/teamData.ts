@@ -106,6 +106,16 @@ export const team: TeamMember[] = [
     quote: "Succeeding in the U.S. takes more than a great product, it takes the right commercial leadership.",
   },
   {
+    slug: "lene-kruse",
+    name: "Lene Kruse",
+    title: "Executive Advisor – Leadership, Organization & Sustainable Growth",
+    advisor: true,
+    img: "/images/team/lene-headshot.webp",
+    aspect: 0.83,
+    linkedin: "https://www.linkedin.com/in/lenekruse/",
+    bio: "Lene Kruse is an international executive and advisor with decades of experience across global manufacturing, food ingredients, and B2B industries. As Global HR & Sustainability Director, she has worked closely with executive teams, boards, and investors on leadership development, talent strategy, organizational transformation, M&A, and international growth.\n\nWith extensive experience across Europe, North America, and Asia, Lene brings valuable insight into the leadership and organizational challenges companies face when expanding internationally. Her expertise in executive leadership, organizational effectiveness, and cross-border collaboration strengthens Berg Hansen's advisory perspective on building high-performing leadership teams and supporting successful U.S. expansion.",
+  },
+  {
     slug: "yolanda-nokuri-hegngi",
     contactButton: true,
     name: "Yolanda Nokuri Hegngi",
