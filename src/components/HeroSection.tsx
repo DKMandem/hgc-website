@@ -1,22 +1,12 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { ArrowCircleRightIcon } from "@/components/icons";
 
 export function HeroSection() {
-  const [swapped, setSwapped] = useState(false);
-
-  useEffect(() => {
-    const id = window.setTimeout(() => setSwapped(true), 8000);
-    return () => window.clearTimeout(id);
-  }, []);
-
   return (
     <section
       data-hero
       className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
     >
-      {/* Layer 1a: initial background image (z-0) */}
+      {/* Layer 1: background image (z-0) */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0 bg-cover"
@@ -25,24 +15,6 @@ export function HeroSection() {
           backgroundPosition: "68% 50%",
         }}
       />
-      {/* Layer 1b: second image, fades in once after 8s and stays.
-          Oversized to 120% so we have horizontal pan room (the natural
-          1536×1024 image fits to width under bg-cover, leaving 0px to pan).
-          Position 0% pushes the man right so only his ear sits under the
-          green panel instead of his eye. */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url(/images/manshakinghand1-fixd.png)",
-          backgroundSize: "110% auto",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "0% 30%",
-          opacity: swapped ? 1 : 0,
-          transition: "opacity 1500ms ease-in-out",
-        }}
-      />
-
       {/* Centered 1200px container so the blue panel aligns with the
           navy header block (both start at the container's left edge) */}
       <div className="relative z-10 mx-auto h-full w-full xl:max-w-[1200px]">

@@ -8,12 +8,16 @@ export function CompanyHero() {
       className="relative w-full overflow-hidden h-[700px] xl:h-[900px]"
     >
       {/* Background photo layer */}
+      {/* Oversized to 110% for horizontal pan room so the man sits right
+          of the green panel */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-0 bg-cover"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url(/images/middleagehandshakelady-fixd-retouched-v2.webp)",
-          backgroundPosition: "68% 50%",
+          backgroundImage: "url(/images/manshakinghand1-fixd.png)",
+          backgroundSize: "110% auto",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "0% 30%",
         }}
       />
 
